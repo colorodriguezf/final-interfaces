@@ -1,0 +1,63 @@
+/* Estilos para el index de presentacion del trabajo*/
+body {
+    margin: 0;
+    background-color: #111;
+    color: white;
+}
+
+nav {
+    padding: 30px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #202020;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 55px;
+    width: auto;
+}
+
+nav h1 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.alumno {
+    text-align: center;
+    color: rgb(254, 219, 219);
+}
+
+ol {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+}
+
+ol li {
+    margin: 10px 0;
+}
+ol li a {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+    align-items: flex-start;
+}
+
+ol li a:hover {
+    color: #ff274b;
+}
