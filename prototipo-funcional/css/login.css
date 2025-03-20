@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root {
+    /*===== Colores =====*/
+    /* Paleta de colores */
+    /* Primario */
+    --primario-color: #ff274b;
+    --luz-color-primario: #FF5A75;
+    --sombra1-primario-color: #D0203E;
+    --sombra2-primario-color: #A01A31;
+    /* Secundario */
+    --secundario-color: #60C7B6;
+    --luz-color-secundario: #89D6C9;
+    --sombra1-secundario-color: #4BA595;
+    --sombra2-secundario-color: #3A8578;
+    /* Acento */
+    --acento-color: #ffd432;
+    --luz-color-acento: #FFE066;
+    --sombra1-acento-color: #D4AF2A;
+    --sombra2-acento-color: #A78921;
+
+    --bg-color-light: #fefefe;
+    --bg-color-dark: #080808;
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    /*===== Margenes =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*===== z index =====*/
+    --z-back: -10;
+    --z-fixed: 100;
+}
+
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+section.login {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/login/fondo-login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+section.login form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 5px;
+}
+section.login form .form-group input {
+    border-radius: 7px;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    color: black;
+}
+section.login form .form-group label {
+    color: #0000007d;   
+    font-size: 1.2rem;
+}
+section.login .contenedor-form-login {
+    width: 65%;
+    margin: auto;
+    background: linear-gradient(140deg, rgba(255, 212, 50, 0.9), rgba(96, 199, 182, 0.9));
+    border-radius: 15px;
+    padding: 30px 0px;
+}
+@media only screen and (min-width: 1100px) {
+    section.login .contenedor-form-login {
+        width: 35%;
+    }
+}
+section.login .contenedor-form-login .contenedor-logo-login {
+    display: flex;
+    justify-content: center;
+}
+section.login .contenedor-form-login img {
+    width: 50px;
+}
+section.login .contenedor-form-login h1 {
+    color: var(--bg-color-dark);
+    font-size: 35px;
+    text-align: center;
+    margin: 5px;
+}
+section.login .contenedor-form-login form {
+    padding: 10px 30px;
+}
+.form-login p.olvidaste-contraseña {
+    color: var(--bg-color-dark);
+    font-weight: 600;
+    margin: 30px 0px;
+}
+
+.form-login .btn-login {
+    margin-top: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    border: none;
+    padding: 20px 40px;
+    background-color: var(--luz-color-primario);
+    color: rgba(255, 255, 255, 0.928);
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-login .btn-login:hover {
+    background-color: var(--primario-color);
+    color: var(--bg-color-light);
+    cursor: pointer;
+}
+.form-login a {
+    text-decoration: none;
+}
+
+.form-login .icons-form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.form-login .icons-form div {
+    display: flex;
+    padding: 10px 22px;
+    background-color: var(--bg-color-light);
+    border-radius: 40px;
+}
+.form-login .icons-form div img {
+    width: 35px;
+}
+.form-login .icons-form div:hover {
+    background-color: rgb(231, 228, 228);
+    cursor: pointer;
+}
