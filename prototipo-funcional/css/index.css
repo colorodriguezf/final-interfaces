@@ -286,10 +286,12 @@ nav.nav-inicio .nav-center ul {
  justify-content: space-around;
  gap: 40px;
 }
-nav.nav-inicio .nav-center ul li {
+nav.nav-inicio .nav-center ul li, nav.nav-inicio .nav-center ul li a {
     display: flex;
     gap: 5px;
     font-size: 16px;
+    text-decoration: none;
+    color: inherit;
 }
 nav.nav-inicio .nav-icons {
     display: flex;
