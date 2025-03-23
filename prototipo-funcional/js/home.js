@@ -14,3 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+// Recomendaciones
+// Filtros (todos, musica, podcast)
+let btns_filtro = document.querySelectorAll('.btn-filtro');
+
+// Añadir un evento de clic a cada botón
+btns_filtro.forEach(boton => {
+    boton.addEventListener('click', () => {
+        btns_filtro.forEach(b => b.classList.remove('activo'));
+        boton.classList.add('activo');
+    });
+});

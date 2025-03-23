@@ -23,6 +23,7 @@
     /*===== Fuente y tipografia =====*/
     --body-font: 'Poppins', sans-serif;
     --big-font-size: 2rem;
+    --color-font: #b3b3b3;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
     --smaller-font-size: .75rem;
@@ -34,6 +35,9 @@
     /*===== z index =====*/
     --z-back: -10;
     --z-fixed: 100;
+
+    /* Botones */
+    --background-btn:#282828;
 }
 
 /* NAV */
@@ -42,9 +46,14 @@ nav.nav-home {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 95%;
+    padding: 10px 0px;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+    width: 100%;
     margin: auto;
+    height: 45px;
+    background-color: var(--bg-color-dark);
 }
 .contenedor-logo-nav {
     display: flex;
@@ -56,7 +65,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .buscador {
     display: flex;
     align-items: center;
-    background-color: #282828;
+    background-color: var(--background-btn);
     gap: 15px;
     border-radius: 50px;
     padding: 10px 15px;
@@ -84,6 +93,10 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .buscador:focus-within {
     border: solid 1px var(--bg-color-light);
 }
+.notificacion {
+    width: 25px;
+    filter: grayscale(100%) brightness(50%); /* como el icono que baje es blanco, le pongo filtro para volverlo mas gris */
+}
 
 /* Perfil */
 .nav-derecha {
@@ -98,7 +111,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #282828;
+    background-color: var(--background-btn);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -120,7 +133,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #282828;
+    background-color: var(--background-btn);
     border-radius: 8px;
     width: 180px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -163,4 +176,186 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .menu-desplegable ul hr {
     margin: 0;
     padding: 0;
+}
+
+
+/* Contenido */
+.contenido {
+    display: flex;
+    gap: 20px;
+    top: 0px;
+}
+.contenido .tu-biblioteca {
+    width: 45%;
+    background-color: red;
+}
+.contenedor-tuspoiler-crear {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    top: 55px;   
+    padding: 10px 2px;
+}
+.tu-biblioteca .btn-crear {
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+    border: none;
+    color: rgb(236, 236, 236);
+    background-color: var(--background-btn);
+    cursor: pointer;
+    font-size: 13px;
+}
+.tu-biblioteca .btn-crear:hover {
+    background-color: #494949;
+}
+.contenedor-tuspoiler-crear div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-font);
+}
+.contenido .recomendaciones {
+    /* width: 60%; */
+    background-color: blue;
+}
+
+
+
+/* Recomendaciones */
+/* Filtros + publicidad */
+.contenedor-filtro-recomendaciones {
+    display: flex;
+    margin: 10px 20px;
+    gap: 10px;
+}
+.contenedor-recomendaciones-filtro {
+    position: fixed;
+    top: 56px; /* son los px que tiene de ancho el nav */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.contenedor-filtro-recomendaciones .btn-filtro {
+    padding: 14px 22px;
+    width: 100px;
+    border-radius: 20px;
+    border:none;
+    color: rgb(237, 237, 237);
+    font-weight: 500;
+    font-size: 12px;
+    background-color: var(--background-btn);
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+.contenedor-filtro-recomendaciones .btn-filtro:hover {
+    background-color: #3a3a3a;
+}
+.contenedor-filtro-recomendaciones .btn-filtro.activo {
+    background-color: var(--sombra2-secundario-color);
+}
+.contenedor-publicidad {
+    margin-top: 10px;
+}
+.contenedor-publicidad img {
+    border-radius: 5px;
+    width: 200px;
+}   
+
+
+
+
+
+
+
+@media only screen and (min-width: 1600px) {
+    nav.nav-home {
+        padding: 20px 0px;
+    }
+    nav.nav-home .contenedor-logo-nav img.img-logo-nav {
+        width: 65px;
+        height: 65px;
+    }
+    .buscador {
+        display: flex;
+        align-items: center;
+        background-color: var(--background-btn);
+        gap: 25px;
+        border-radius: 50px;
+        padding: 15px 20px;
+        width: 400px;
+    }
+    
+    .buscador input {
+        font-size: 18px;
+    }
+        
+    .notificacion {
+        width: 40px;
+    }
+    
+    /* Perfil */
+    .nav-derecha {
+        gap: 25px;
+        padding-right: 120px;
+    }
+    .profile-container {
+        width: 50px;
+        height: 50px;
+    }
+        
+    /* Menu desplegable perfil */
+    /* Estilos del menú desplegable */
+    .menu-desplegable {
+        position: absolute;
+        top: 90px;
+        right: 120px;
+        background-color: var(--background-btn);
+        border-radius: 8px;
+        width: 250px;
+    }
+
+    .menu-desplegable li {
+        font-size: 19px;
+        padding: 15px;
+    }
+
+    .contenedor-recomendaciones-filtro {
+        top: 80px;   
+
+    }
+    .contenedor-recomendaciones-filtro {
+        width: 64%;
+    }
+    .contenido .tu-biblioteca {
+        width: 15%;
+    }
+    .contenedor-tuspoiler-crear div {
+        gap: 15px;
+        font-size: 20px;
+    }
+    .tu-biblioteca .btn-crear {
+        border-radius: 20px;
+        padding: 10px 20px;
+        display: flex;
+        gap: 10px;
+        font-size: 17px;
+    }
+
+    .contenedor-filtro-recomendaciones .btn-filtro {
+        padding: 12px 22px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    .contenedor-filtro-recomendaciones .btn-filtro {
+        padding: 20px 35px;
+        width: 140px;
+        font-size: 16px;
+    }
 }

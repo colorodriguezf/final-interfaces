@@ -41,6 +41,7 @@ body {
     background-color: var(--bg-color-dark);
     color: var(--bg-color-light);
     padding: 0px 30px;
+    margin-top: 0px;
 }
 /* NAV + HERO */
 .nav-inicio-grande {
