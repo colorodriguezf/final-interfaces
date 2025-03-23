@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root {
+    /*===== Colores =====*/
+    /* Paleta de colores */
+    /* Primario */
+    --primario-color: #ff274b;
+    --luz-color-primario: #FF5A75;
+    --sombra1-primario-color: #D0203E;
+    --sombra2-primario-color: #A01A31;
+    /* Secundario */
+    --secundario-color: #60C7B6;
+    --luz-color-secundario: #89D6C9;
+    --sombra1-secundario-color: #4BA595;
+    --sombra2-secundario-color: #3A8578;
+    /* Acento */
+    --acento-color: #ffd432;
+    --luz-color-acento: #FFE066;
+    --sombra1-acento-color: #D4AF2A;
+    --sombra2-acento-color: #A78921;
+
+    --bg-color-light: #fefefe;
+    --bg-color-dark: #080808;
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    /*===== Margenes =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*===== z index =====*/
+    --z-back: -10;
+    --z-fixed: 100;
+}
+
+/* NAV */
+/* Buscador */
+nav.nav-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 95%;
+    margin: auto;
+}
+.contenedor-logo-nav {
+    display: flex;
+}
+nav.nav-home .contenedor-logo-nav img.img-logo-nav {
+    width: 45px;
+    height: 45px;
+}
+.buscador {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    gap: 15px;
+    border-radius: 50px;
+    padding: 10px 15px;
+    width: 300px;
+}
+
+.buscador i {
+    color: #b3b3b3;
+    margin-right: 10px;
+}
+
+.buscador input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+.buscador input::placeholder {
+    color: #b3b3b3;
+}
+
+.buscador:focus-within {
+    border: solid 1px var(--bg-color-light);
+}
+
+/* Perfil */
+.nav-derecha {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #282828;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-container:hover {
+    transform: scale(1.1);
+}
+
+.profile-icon {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Menu desplegable perfil */
+/* Estilos del menú desplegable */
+.menu-desplegable {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #282828;
+    border-radius: 8px;
+    width: 180px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+}
+
+.menu-desplegable.show {
+    display: flex;
+}
+
+.menu-desplegable ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-desplegable li {
+    font-size: 13px;
+    padding: 12px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.menu-desplegable li a {
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-desplegable li:hover {
+    background-color: #3a3a3a;
+}
+.menu-desplegable li:hover a {
+    color: white;
+    text-decoration: underline;
+}
+
+.menu-desplegable ul hr {
+    margin: 0;
+    padding: 0;
+}
