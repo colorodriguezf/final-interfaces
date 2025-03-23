@@ -70,6 +70,10 @@ nav {
     display: flex;
     align-items: center;
 }
+.contenedor-nav > div:first-child img {
+    width:220px;
+    height: 55px;
+}
 
 .contenedor-nav > div:last-child {
     width: 50%;
@@ -168,33 +172,92 @@ section.planes {
     background: linear-gradient(90deg, #0f0f0f 0%, #000000 81%);
     text-align: center;
     padding: 50px 20px;
+    margin-bottom: 60px;
 }
 section.planes h1.h1-planes {
-    font-size: 3rem;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
 }
 section.planes .contenedor-planes {
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 80px; /* como tuve que hacer el position y top -68px, tengo que compensar aca */
 }
 section.planes .contenedor-plan {
     border-radius: 15px;
-    border:solid 1px var(--acento-color);
+    border:solid 1px #89d6c97d;
     width: max-content;
-    min-width: 360px;
+    min-width: 340px;
+    min-height: 210px;
     box-sizing: border-box;
     text-align: left;
     padding: 15px;
 }
+section.planes .contenedor-plan.recomendado {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+    height: 440px;
+}
+.contenedor-plan.recomendado .contenedor-data-popular {
+    position:relative;
+    top:-56px;
+}
+.el-mas-popular {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -73px;
+    right: 15px;
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: var(--secundario-color);
+    padding: 0px 15px;
+}
+section.planes .contenedor-plan.recomendado .el-mas-popular {
+    background-color: var(#60c7b6ba);
+}
+.contenedor-plan .costo {
+    font-size: 0.9rem;
+}
+.contenedor-plan .costo span {
+    font-size: 2.5rem;
+}
+hr {
+    border: none;
+    height: 2px;
+    background-color: #2C2C2C;
+    margin: 20px 0;
+}
+.contenedor-plan .emnpezar-ahora {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    color: #60c7b6eb;
+    background-color: transparent;
+    border:solid 1px #60C7B6;
+}
+.contenedor-plan .emnpezar-ahora:hover {
+    background-color: #60c7b6eb;
+    color: rgb(224, 224, 224);
+}
 section.planes .contenedor-plan:hover {
-    background-color: #d9d9d91a;
+    box-shadow: 3px 2px 8px rgba(163, 163, 163, 0.289);
+    background-color: #111111;
 }
 section.planes .contenedor-plan h2 {
-    color: var(--luz-color-acento);
+    color: var(--bg-color-light);
     font-weight: 600;
     margin: 7px;
+    font-size: 0.9rem;
 }
 section.planes .contenedor-plan h3 {
     margin: 7px;
@@ -204,8 +267,15 @@ section.planes .contenedor-plan h4 {
     margin: 7px;
 }
 .contenedor-plan .ul-planes p {
-    font-size: 0.8rem;
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
     color: #fefefee8;
+}
+.contenedor-plan .ul-planes p.incluye {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
 }
 
 
@@ -278,7 +348,7 @@ nav.nav-inicio {
     background-color: #151515;
 }
 nav.nav-inicio .nav-logo img {
-    width: 220px;
+    width: 200px;
 }
 nav.nav-inicio .nav-center ul {
  list-style: none;
