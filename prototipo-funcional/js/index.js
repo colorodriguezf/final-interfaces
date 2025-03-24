@@ -2,12 +2,12 @@
 // no lo hice con html, css y js puro por el tiempo
 $(document).ready(function() {
     $('.carousel').slick({
-        slidesToShow: 10,
+        slidesToShow: 9,
         slidesToScroll: 1,
         autoplay: false,
         responsive: [
             {
-                breakpoint: 1500,
+                breakpoint: 1600,
                 settings: {
                     slidesToShow:8
                 }
@@ -19,23 +19,11 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 992,
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 5
                 }
             },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
         ]
     });
 
