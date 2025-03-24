@@ -42,6 +42,9 @@
 
 /* NAV */
 /* Buscador */
+body {
+    padding: 0px 20px;
+}
 nav.nav-home {
     display: flex;
     justify-content: space-between;
@@ -50,7 +53,6 @@ nav.nav-home {
     position: sticky;
     top:0px;
     z-index: 1;
-    width: 100%;
     margin: auto;
     height: 45px;
     background-color: var(--bg-color-dark);
@@ -59,8 +61,8 @@ nav.nav-home {
     display: flex;
 }
 nav.nav-home .contenedor-logo-nav img.img-logo-nav {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
 .buscador {
     display: flex;
@@ -131,8 +133,8 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 /* Estilos del menú desplegable */
 .menu-desplegable {
     position: absolute;
-    top: 60px;
-    right: 0;
+    top: 65px;
+    right: 5px;
     background-color: var(--background-btn);
     border-radius: 8px;
     width: 180px;
@@ -187,7 +189,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     width: 100%;
 }
 .contenido .tu-biblioteca {
-    width: 30%;
+    width: 32%;
 }
 .contenedor-crear-playlist {
     display: flex;
@@ -205,7 +207,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 }
 .tu-biblioteca .btn-crear {
     border-radius: 20px;
-    padding: 8px 12px;
+    padding: 10px 15px;
     display: flex;
     gap: 5px;
     font-weight: bold;
@@ -234,13 +236,13 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--color-font);
 }
 .contenido .recomendaciones {
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 /* Tus playlist */
@@ -260,20 +262,22 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     background-color:#222222;
 }
 .tus-playlist ul li img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 10px;
 }
-.tus-playlist ul li div h4, .tus-playlist ul li div p {
+.tus-playlist ul li div p {
     margin: 0px;
 }
-.tus-playlist ul li div h4 {
+.tus-playlist ul li div .nombre-tus-playlist {
     font-size: 14px;
-    color:rgb(218, 218, 218);
+    font-weight: 500;
+    color:rgb(252, 252, 252);
+    font-weight: 500;
 }
 .tus-playlist ul li div p {
     font-size: 12px;
-    color:rgb(227, 227, 227);
+    color:rgb(198, 198, 198);
 }
 .publicidad-playlist {
     display: flex;
@@ -288,7 +292,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 /* Filtros + publicidad */
 .contenedor-filtro-recomendaciones {
     display: flex;
-    margin: 10px 20px;
+    margin: 15px 20px;
     gap: 10px;
 }
 .contenedor-recomendaciones-filtro {
@@ -364,11 +368,14 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 /* Media query pantalla > 1600px */
 @media only screen and (min-width: 1600px) {
     nav.nav-home {
+        width: 100%;
         padding: 30px 0px;
+        height: 40px;
     }
     nav.nav-home .contenedor-logo-nav img.img-logo-nav {
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
+        margin-left: 30px;
     }
     .buscador {
         display: flex;
@@ -400,11 +407,11 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     /* Perfil */
     .nav-derecha {
         gap: 25px;
-        padding-right: 120px;
+        padding-right: 160px;
     }
     .profile-container {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
         
     /* Menu desplegable perfil */
@@ -435,7 +442,8 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     }
     .contenedor-tuspoiler-crear div {
         gap: 15px;
-        font-size: 20px;
+        font-size: 22px;
+        font-weight: 700;
     }
     .tu-biblioteca .btn-crear {
         border-radius: 20px;
@@ -469,14 +477,35 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     .tus-playlist ul li img {
         width: 70px;
         height: 70px;
-        border-radius: 1px;
+        border-radius: 6px;
     }
-    .tus-playlist ul li div h4 {
+    .tus-playlist ul li div .nombre-tus-playlist {
         font-size: 20px;
-        color:rgb(235, 235, 235);
+        color:rgb(255, 255, 255);
     }
     .tus-playlist ul li div p {
         font-size: 16px;
-        color:rgb(227, 227, 227);
+        color:rgb(210, 210, 210);
     }
+
+    /* Recomendaciones */
+    /* Filtros + publicidad */
+    .contenedor-filtro-recomendaciones {
+        display: flex;
+        margin: 10px 40px;
+        gap: 15px;
+    }
+    .contenedor-recomendaciones-filtro {
+        position: fixed;
+        top: 80px; /* son los px que tiene de ancho el nav */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .contenedor-filtro-recomendaciones .btn-filtro {
+        padding: 12px 22px;
+        width: 110px;
+        font-size: 16px;
+    }
+    
 }
