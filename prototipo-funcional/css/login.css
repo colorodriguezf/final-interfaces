@@ -58,27 +58,22 @@ section.login form .form-group {
     gap: 5px;
 }
 section.login form .form-group input {
-    border-radius: 7px;
+    border-radius: 6px;
     border: none;
-    padding: 14px;
+    padding: 12px;
     font-size: 1.1rem;
     color: black;
 }
 section.login form .form-group label {
-    color: #0000007d;   
+    color: #00000099;   
     font-size: 1.2rem;
 }
 section.login .contenedor-form-login {
-    width: 65%;
+    width: 50%;
     margin: auto;
     background: linear-gradient(140deg, rgba(255, 212, 50, 0.9), rgba(96, 199, 182, 0.9));
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 30px 30px;
-}
-@media only screen and (min-width: 1100px) {
-    section.login .contenedor-form-login {
-        width: 35%;
-    }
 }
 section.login .contenedor-form-login .contenedor-logo-login {
     display: flex;
@@ -94,7 +89,7 @@ section.login .contenedor-form-login h1 {
     margin: 5px;
 }
 section.login .contenedor-form-login form {
-    padding: 10px 30px;
+    padding: 10px 25px;
 }
 .form-login p.olvidaste-contraseña {
     color: var(--bg-color-dark);
@@ -143,4 +138,65 @@ section.login .contenedor-form-login form {
 .form-login .icons-form div:hover {
     background-color: rgb(231, 228, 228);
     cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+    section.login .contenedor-form-login {
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    section.login .contenedor-form-login {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    section.login form .form-group input {
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 1.4rem;
+    }
+    section.login form .form-group label {
+        font-size: 1.5rem;
+    }
+    section.login .contenedor-form-login {
+        width: 25%;
+        padding: 40px 40px;
+    }
+    section.login .contenedor-form-login .contenedor-logo-login {
+        display: flex;
+        justify-content: center;
+    }
+    section.login .contenedor-form-login img {
+        width: 50px;
+    }
+    section.login .contenedor-form-login h1 {
+        font-size: 45px;
+        margin: 10px;
+    }
+
+    .form-login p.olvidaste-contraseña {
+        font-size: 1.1rem;
+    }
+    
+    .form-login .btn-login {
+        margin-top: 3.5rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    
+    .form-login .icons-form {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    .form-login .icons-form div {
+        display: flex;
+        padding: 10px 30px;
+        border-radius: 30px;
+    }
+    .form-login .icons-form div img {
+        width: 48px;
+    }
 }
