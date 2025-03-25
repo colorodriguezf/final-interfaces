@@ -246,6 +246,10 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 }
 
 /* Tus playlist */
+.menu-container {
+    position: relative;
+    cursor: pointer;
+}
 .tus-playlist ul {
     list-style: none;
     padding-left: 0px;
@@ -262,8 +266,8 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     background-color:#222222;
 }
 .tus-playlist ul li img {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: 10px;
 }
 .tus-playlist ul li div p {
@@ -287,6 +291,50 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .publicidad-playlist img {
     border-radius: 5px;
 }
+/* Menu desplegable tus playlist */
+.menu-tus-playlist {
+    display: none;
+    position: absolute;
+    width: 140px;
+    top: 25px;
+    left: -130px;
+    padding: 10px;
+    list-style: none;
+    border-radius: 5px;
+    background: #282828;
+}
+.menu-tus-playlist p {
+    font-size: 12px;
+}
+.menu-tus-playlist li {
+    font-size: 14px;
+    padding: 6px 5px;
+    cursor: pointer;
+    color: rgb(211, 211, 211);
+    font-weight: 600;
+}
+.menu-tus-playlist li:hover {
+    color: rgb(238, 236, 236);
+}
+/* Menu activo */
+.show-menu-tus-playlist {
+    display: block;
+}
+.menu-tus-playlist li.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secundario-color);
+}
+.menu-tus-playlist li.active img {
+    width: 26px;
+    display:flex;
+}
+.menu-tus-playlist li img {
+    display: none;
+}
+
+
 
 /* Recomendaciones */
 /* Filtros + publicidad */
@@ -475,18 +523,50 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
         padding: 15px;
     }
     .tus-playlist ul li img {
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
+        width:60px;
+        height: 60px;
+        border-radius: 7px;
     }
     .tus-playlist ul li div .nombre-tus-playlist {
         font-size: 20px;
         color:rgb(255, 255, 255);
+        font-weight: 600;
     }
     .tus-playlist ul li div p {
         font-size: 16px;
-        color:rgb(210, 210, 210);
+        color:rgb(208, 208, 208);
     }
+    /* Menu desplegable tus playlist */
+    .menu-tus-playlist {
+        display: none;
+        position: absolute;
+        width: 180px;
+        top: 25px;
+        left: -168px;
+        padding: 10px;
+        list-style: none;
+        border-radius: 8px;
+        background: #2b2b2b;
+    }
+    .menu-tus-playlist p {
+        font-size: 15px;
+    }
+    .menu-tus-playlist li {
+        font-size: 20px;
+        padding: 8px;
+    }
+    /* Menu activo */
+    .show-menu-tus-playlist {
+        display: block;
+    }
+    .menu-tus-playlist li.active img {
+        width: 26px;
+        display:flex;
+    }
+    .menu-tus-playlist li img {
+        display: none;
+    }
+
 
     /* Recomendaciones */
     /* Filtros + publicidad */
