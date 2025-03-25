@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoiler Five Inc</title>
+    <link rel="icon" href="../prototipo-funcional/img/spoiler-five-inc-logo-byn.png" type="image/png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/footer-sesion.css">
+    
+</head>
+<body>
+
+    <nav class="nav-home">
+        <div class="contenedor-logo-nav"><a href="../prototipo-funcional/home.html"><img class="img-logo-nav" src="img/spoiler-five-inc-logo-byn.png" alt=""></a></div>
+        <div class="nav-derecha">
+            <img class="notificacion" src="icons/notificacion.svg" alt="">
+            <div class="profile-container" id="btn-perfil">
+                <img class="profile-icon" src="icons/img-perfil.svg" alt="Perfil">
+            </div>
+        </div>
+
+        <!-- menu desplegable -->
+        <div class="menu-desplegable" id="menuDesplegable">
+            <ul>
+                <li><a href="#">Mi cuenta <img src="icons/menu-desplegable.svg" alt=""></a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="faq.html">FAQ <img src="icons/menu-desplegable.svg" alt=""></a></li>
+                <li><a href="#">Descargar <img src="icons/menu-desplegable.svg" alt=""></a></li>
+                <li><a href="#">Planes</a></li>
+                <hr>
+                <li><a href="index.html">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </nav>  
+
+    <section class="faq-title" id="faq-section">
+        <h1>Frequently</h1>
+        <h1>Asked <img src="icons/musica-icono.svg" alt=""></h1> 
+        <h1>Question</h1>
+    </section>
+    <div class="contenedor-mouse">
+            <svg class="scroll-down__icon scroll-down__icon--desktop d-none d-md-block" width="32" height="51" viewBox="0 0 32 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Icono para Desktop -->
+                <path class="mouse-wheel" d="M19 34.2312C19 35.918 17.649 37.3 16 37.3C14.347 37.3 13 35.918 13 34.2312V31.0688C13 29.382 14.351 28 16 28C17.649 28 19 29.382 19 31.0688V34.2312Z" fill="white"></path>
+                <path class="mouse-outer" d="M0 15.5V34.5H4V15.5H0ZM0 34.5C0 42.0091 6.30236 50 16 50V46C8.69764 46 4 39.9909 4 34.5H0ZM16 50C25.6976 50 32 42.0091 32 34.5H28C28 39.9909 23.3024 46 16 46V50ZM32 34.5V15.5H28V34.5H32ZM32 15.5C32 7.99086 25.6976 0 16 0V4C23.3024 4 28 10.0091 28 15.5H32ZM16 0C6.30236 0 0 7.99086 0 15.5H4C4 10.0091 8.69764 4 16 4V0Z" fill="white"></path>
+            </svg>
+    </div>
+
+    <!-- Preguntas -->
+     <section class="preguntas" id="preguntas-section">
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        ¿Necesito una cuenta para escuchar música?
+                    </button>
+                </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <p>Sí, para disfrutar de toda la música en nuestro sitio, necesitas crear una cuenta. Puedes registrarte gratis o elegir una suscripción premium para disfrutar de beneficios adicionales como audio de alta calidad y sin anuncios.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ¿Puedo descargar canciones para escucharlas sin conexión?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Sí, con una suscripción premium puedes descargar tus canciones favoritas y escucharlas sin conexión en cualquier momento. Solo tienes que presionar el botón de descarga en la canción o álbum que desees guardar.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ¿Cómo puedo descubrir nueva música?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Puedes descubrir nueva música explorando listas de reproducción recomendadas según tus gustos, utilizando funciones como "Descubrimiento Semanal" o "Radar de Novedades", escuchando radios de artistas o géneros similares y siguiendo a amigos o artistas para ver qué están escuchando.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    ¿Puedo compartir mi música con amigos?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Sí, puedes compartir tu música con amigos enviando canciones, álbumes o playlists a través de enlaces, redes sociales o integraciones dentro de la plataforma que estés usando.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+     </section>
+
+      <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-column">
+                    <h3>Compañía</h3>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Empleo</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Comunidades</h3>
+                    <ul>
+                        <li><a href="#">Artistas</a></li>
+                        <li><a href="#">Desarrolladores</a></li>
+                        <li><a href="#">Publicidad</a></li>
+                        <li><a href="#">Inversores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Aplicación móvil</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-right">
+                <img src="icons/facebook.svg" alt="Facebook">
+                <img src="icons/Twitch.svg" alt="Twitter">
+                <img src="icons/instagram.svg" alt="Instagram">
+                <img src="icons/discord.svg" alt="YouTube">
+            </div>
+        </div>
+
+        <hr>
+        <div class="footer-abajo">
+            <div class="legales-links">
+                <a href="#">Legal</a>
+                <a href="#">Centro de privacidad</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sobre los anuncios</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+            <div class="logo-container">
+                <a href="../prototipo-funcional/home.html"><img src="img/LOGO+NOMBRE.png" alt="Logo"></a>
+            </div>
+        </div>
+
+    </footer>
+    
+    <script src="js/home.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>
