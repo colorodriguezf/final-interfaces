@@ -2,7 +2,7 @@
 // no lo hice con html, css y js puro por el tiempo
 $(document).ready(function() {
     $('.carousel').slick({
-        slidesToShow: 9,
+        slidesToShow: 10,
         slidesToScroll: 1,
         autoplay: false,
         responsive: [

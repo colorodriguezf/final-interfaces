@@ -54,7 +54,7 @@ body {
 
 nav {
     width: 100%;
-    font-size: clamp(11px, 1vw, 20px);
+    font-size: clamp(11px, 1vw, 14px);
     /* padding: 10px; */
 }
 
@@ -405,7 +405,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 15px 0px;
+    padding: 20px 0px;
 }
 
 .contenedor-nav > div:first-child {
@@ -414,8 +414,8 @@ nav {
     align-items: center;
 }
 .contenedor-nav > div:first-child img {
-    width:320px;
-    height: 65px;
+    width:200px;
+    height: 45px;
 }
 
 .contenedor-nav > div:last-child {
@@ -428,7 +428,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 20px;
-    padding: 0px 20px 0px 0px;
+    padding: 0px 10px 0px 0px;
     margin: 0;
     justify-content: space-between;
     align-items: center;
@@ -464,31 +464,20 @@ nav {
 
 .btn-prueba-gratis-nav {
     border: none;
-    padding: 16px 22px;
+    padding: 15px 22px;
     margin-left: 10px;
     border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .btn-prueba-gratis-nav.hero {
     margin-top: 3rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     border-radius: 16px;
-    padding: 20px 40px;
-    background-color: var(--primario-color);
-    color: var(--bg-color-light);
-}
-
-.btn-prueba-gratis-nav:hover {
-    background-color: var(--primario-color);
-    color: var(--bg-color-light);
-}
-
-.btn-prueba-gratis-nav.hero:hover {
-    background-color: var(--luz-color-primario);
+    padding: 20px 30px;
 }
 
 /* Hero nav*/
@@ -498,72 +487,47 @@ nav {
 .contenedor-hero img {
     height: 100%;
 }
-.nav-inicio-grande .contenedor-hero {
-    display: flex;
-    justify-content: space-around;
-}
-.nav-inicio-grande .contenedor-hero .contenedor-hero-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 .nav-inicio-grande .contenedor-hero .contenedor-hero-texto h1 {
-    font-size: 6.2rem;
-    margin: 0px;
+    font-size: 4.2rem;
 }
 .nav-inicio-grande .contenedor-hero .contenedor-hero-texto p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 /* ---------------------------------------------------------- */
 
 /* Seccion PLANES */
 section.planes {
-    background: linear-gradient(90deg, #0f0f0f 0%, #000000 81%);
+    background: linear-gradient(90deg, #161616 0%, #000000 81%);
     text-align: center;
     padding: 50px 20px;
     margin-bottom: 60px;
 }
 section.planes h1.h1-planes {
-    font-size: 4.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 section.planes .subtitulo-planes {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 section.planes img.img-usuarios {
     width: 180px;
 }
 section.planes img {
-    width: 32px;
-}
-section.planes .contenedor-planes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    gap: 20px;
-}
-section.planes .contenedor-plan {
-    border-radius: 15px;
-    border:solid 1px #89d6c97d;
-    width: max-content;
-    min-width: 500px;
-    min-height: 210px;
-    box-sizing: border-box;
-    text-align: left;
-    padding: 15px;
+    width: 25px;
 }
 
+
 .contenedor-plan .costo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .contenedor-plan .costo span {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
 }
 
 .contenedor-plan .emnpezar-ahora {
-    padding: 18px;
-    font-size: 1.2rem;
+    padding: 16px;
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
@@ -571,13 +535,13 @@ section.planes .contenedor-plan h2 {
     color: var(--bg-color-light);
     font-weight: 600;
     margin: 7px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .contenedor-plan .ul-planes p {
     display: flex;
     gap: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #fefefee8;
 }
 .contenedor-plan .ul-planes p.incluye {
@@ -601,7 +565,7 @@ section.carousel-container {
 
 .carousel img {
     width: auto;
-    height: 235px;
+    height: auto;
 }
 /* ----------------------------------------------------------- */
 /* Section FAQ */
@@ -610,7 +574,7 @@ section.faq {
 }
 section.faq h1.titulo-faq {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 4rem;
 }
 section.faq .contenedor-faq {
     display: flex;
@@ -622,33 +586,32 @@ section.faq .contenedor-faq div {
     width: 35%;
 }
 section.faq .contenedor-faq div h1 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
 }
 section.faq .contenedor-faq div p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 /* ---------------------------------------------------------- */
-    /* Nav inicio */
     /* Footer inicio */
     footer.footer-inicio {
-        padding: 30px 140px;
+        padding: 20px 140px;
     }
     footer.footer-inicio .footer-logo img {
-        width: 260px;
+        width: 200px;
     }
     footer.footer-inicio .footer-center ul {
         gap: 100px;
     }
     .footer-center ul li, footer.footer-inicio .footer-center ul li a {
         gap: 10px;
-        font-size: 21px;
+        font-size: 17px;
     }
     footer.footer-inicio .footer-icons {
         display: flex;
         gap: 25px;
     }
     footer.footer-inicio .footer-icons img {
-        width: 55px;
+        width: 40px;
     }
 }
