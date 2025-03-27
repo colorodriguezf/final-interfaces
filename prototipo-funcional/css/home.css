@@ -506,7 +506,7 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     position: absolute;
     bottom: 0px;
     right: 12px;
-    background-color: #f7284af2;
+    background-color: #fe193f;
     color: rgba(0, 0, 0, 0.809);
     border: none;
     border-radius: 50%;
@@ -516,6 +516,7 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     opacity: 0;
     bottom: -10px;
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    filter: brightness(95%);
 }
 
 .contenedor-img-card:hover .btn-play {
@@ -524,8 +525,9 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
 }
 
 .btn-play:hover {
-    background-color: #fc173e;
+    /* background-color: #fc173e; */
     color: #2d2d2d;
+    filter: brightness(140%);
 }
 
 .btn-play svg {
@@ -534,8 +536,8 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
 }
 
 .btn-play:hover svg {
-    width: 31px;
-    height: 31px;
+    transform: scale(1.1);
+    filter: brightness(110%);
 }
 
 /* ----------------------------------------- */
