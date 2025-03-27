@@ -37,7 +37,7 @@
     --z-fixed: 100;
 
     /* Botones */
-    --background-btn:#2f2f2fd1;
+    --background-btn:#323232;
 }
 
 /* NAV */
@@ -52,7 +52,7 @@ nav.nav-home {
     padding: 15px 0px;
     position: sticky;
     top:0px;
-    z-index: 1;
+    z-index: 2;
     margin: auto;
     background-color: var(--bg-color-dark);
 }
@@ -137,9 +137,9 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     background-color: var(--background-btn);
     border-radius: 8px;
     width: 180px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
+    z-index: 3;
 }
 
 .menu-desplegable.show {
@@ -188,7 +188,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     width: 100%;
 }
 .contenido .tu-biblioteca {
-    width: 32%;
+    width: 40%;
 }
 .contenedor-crear-playlist {
     display: flex;
@@ -239,7 +239,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     color: var(--color-font);
 }
 .contenido .recomendaciones {
-    width: 100%;
+    width: 75%;
     /* background-color: blue; */
 }
 
@@ -346,10 +346,13 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 }
 .contenedor-recomendaciones-filtro {
     position: fixed;
-    top: 56px; /* son los px que tiene de ancho el nav */
+    top: 70px; /* son los px que tiene de ancho el nav */
     display: flex;
     justify-content: space-between;
-    margin-top: 18px;
+    padding-top: 18px;
+    width: 100%; /*si o si tiene que tener el width del contenedor, sino no anda el z-index */
+    z-index: 1;
+    background-color: var(--bg-color-dark);
 }
 .contenedor-filtro-recomendaciones .btn-filtro {
     padding: 12px 20px;
@@ -410,6 +413,132 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     justify-content: space-between;
 }
 
+
+/* Playlist y canciones (CAROUSELES) */
+section.playlist-home {
+    margin-top: 100px;
+}
+section.playlist-home .carousel-recomendaciones {
+    /* width: auto; */
+    margin: 10px 30px;
+}
+section.playlist-home .carousel-recomendaciones .contenedor-card {
+    /* width: 40%; */
+    margin: 40px;
+
+}
+section.playlist-home .carousel-recomendaciones .contenedor-card img {
+}
+
+/* SWIPPER */
+/* Contenedor: 196 x 248 */
+.swiper {
+    width: 99%;
+    z-index: 0;
+  }
+  h2.titulo-carousel {
+    margin: 10px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 8px;
+    text-align: center;
+    background: none;
+    border-radius: 8px;
+    cursor:pointer;
+  }
+  .swiper-slide:hover {
+    background: #1F1F1F;
+  }
+  .swiper-slide:hover .contenedor-titulo-corazon p {
+    font-weight: 600;
+  }
+  
+  .slide-content {
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .slide-content .contenedor-img-card {
+    position: relative;
+    display: inline-block;
+    height: 85%;
+  }
+  .slide-content .contenedor-titulo-corazon p {
+    margin: 0px;
+  }
+  .slide-content .contenedor-titulo-corazon .corazon-card {
+    width: 15px;
+    height: 15px;
+  }
+  .slide-content:hover .contenedor-titulo-corazon .corazon-card{
+    width: 21px;
+    height: 21px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  .contenedor-titulo-corazon {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .contenedor-titulo-corazon p {
+    font-size: 12px;
+    color: var(--color-font);
+    font-weight: 500;
+  }
+  .contenedor-titulo-corazon img {
+    width: 15px;
+    cursor:pointer;
+  }
+
+  /* Play de la card */
+  .btn-play {
+    position: absolute;
+    bottom: 0px;
+    right: 12px;
+    background-color: #f7284af2;
+    color: rgba(0, 0, 0, 0.809);
+    border: none;
+    border-radius: 50%;
+    padding: 11px 9px 9px 11px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    bottom: -10px;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.contenedor-img-card:hover .btn-play {
+    opacity: 1;
+    bottom: 7px;
+}
+
+.btn-play:hover {
+    background-color: #fc173e;
+    color: #2d2d2d;
+}
+
+.btn-play svg {
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
+
+.btn-play:hover svg {
+    width: 31px;
+    height: 31px;
+}
+
+/* ----------------------------------------- */
 
 
 
@@ -479,10 +608,10 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
         padding: 12px;
     }
     .contenedor-recomendaciones-filtro {
-        width: 64%;
+        width: 55%;
     }
     .contenido .tu-biblioteca {
-        width: 25%;
+        width: 32%;
     }
     .contenedor-tuspoiler-crear div {
         gap: 15px;
