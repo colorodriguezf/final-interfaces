@@ -98,3 +98,85 @@ publicidad.addEventListener("click", quitarPublicidad);
 function quitarPublicidad() {
     publicidad.style.display = 'none';
 }
+
+// Playlist y recomendaciones
+// Carousel
+$(document).ready(function() {
+    $('.carousel-recomendaciones').slick({
+        slidesToShow: 7, // Mostramos 7 elementos en pantallas grandes
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        // responsive: [
+        //     {
+        //         breakpoint: 1800,
+        //         settings: {
+        //             slidesToShow: 6
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 1600,
+        //         settings: {
+        //             slidesToShow: 6
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 1200,
+        //         settings: {
+        //             slidesToShow: 5
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 992,
+        //         settings: {
+        //             slidesToShow: 4
+        //         }
+        //     },
+        // ]
+    });
+});
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next", // Solo el botón siguiente
+    },
+    loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      800: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1300: {
+        slidesPerView: 5,
+        spaceBetween: 5,
+      },
+      1600: {
+        slidesPerView: 7,
+        spaceBetween: 8,
+      },
+    },
+  });
+
+
+//  Cambio de corazon al darle like a una card
+document.querySelectorAll('.corazon-card').forEach(card => {
+    card.addEventListener('click', () => {
+        let srcActual = card.getAttribute("src");
+        if (srcActual == "icons/corazon-gris.svg") {
+            card.setAttribute("src", "icons/corazon-amarillo.svg");
+        } else {
+            card.setAttribute("src", "icons/corazon-gris.svg");
+        }
+    });
+});
