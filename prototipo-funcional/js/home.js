@@ -175,8 +175,10 @@ document.querySelectorAll('.corazon-card').forEach(card => {
         let srcActual = card.getAttribute("src");
         if (srcActual == "icons/corazon-gris.svg") {
             card.setAttribute("src", "icons/corazon-amarillo.svg");
+            card.classList.add("efecto-like");
         } else {
             card.setAttribute("src", "icons/corazon-gris.svg");
+            card.classList.remove("efecto-like");
         }
     });
 });
