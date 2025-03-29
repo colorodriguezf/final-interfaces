@@ -182,3 +182,4 @@ document.querySelectorAll('.corazon-card').forEach(card => {
         }
     });
 });
+

@@ -189,20 +189,22 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 }
 .contenido .tu-biblioteca {
     width: 40%;
+    height: 100vh;
+    overflow: auto;
 }
 .contenedor-crear-playlist {
     display: flex;
     justify-content: space-between;
 }
 .contenedor-tuspoiler-crear {
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    width: 25%; 
     gap: 25px;
     justify-content: space-between;
     background-color: black;
-    top: 65px;   
-    padding: 10px 2px;
+    padding: 25px 2px;
 }
 .tu-biblioteca .btn-crear {
     border-radius: 20px;
@@ -238,9 +240,36 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     font-weight: bold;
     color: var(--color-font);
 }
+::-webkit-scrollbar {
+    display: none;
+}
 .contenido .recomendaciones {
-    width: 75%;
+    height: 100vh;
+    overflow-y: auto;
+    width: 97%;
     /* background-color: blue; */
+}
+.contenido .recomendaciones::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra */
+}
+
+.contenido .recomendaciones::-webkit-scrollbar-track {
+    background: transparent; /* Fondo de la barra */
+}
+
+.contenido .recomendaciones::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Color del scroll */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.contenido .recomendaciones::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8); /* Color al pasar el mouse */
+}
+
+/* Para Firefox */
+.contenido .recomendaciones {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 
 /* Tus playlist */
@@ -254,6 +283,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .tus-playlist ul {
     list-style: none;
     padding-left: 0px;
+    margin-top: 210px;
 }
 .tus-playlist ul li {
     display: flex;
@@ -693,7 +723,7 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
 .contenedor-podcast-grandes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 99%;
+    width: 95%;
     margin: auto;
     gap: 15px;
 }
@@ -704,18 +734,25 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     border-radius: 7px;
     padding: 10px 30px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 /* Colores de fondo de los 2 podcast */
 .podcast-grande.pg-1 {
     background-color: #ff274b85;
 }
+.podcast-grande.pg-1:hover {
+    background-color: rgba(255, 39, 75, 0.612);
+}
 .podcast-grande.pg-2 {
     background-color: #60c7b68e;
+}
+.podcast-grande.pg-2:hover {
+    background-color: #60c7b6b5;
 }
 .podcast-grande .icon-nombre-podcast {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
     gap: 15px;
 }
@@ -728,11 +765,14 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     height: 70px;
     border-radius: 5px;
 }
+.podcast-grande .img-podcast {
+    margin: 20px auto;
+}
 .podcast-grande .img-podcast img {
     height: 200px;
     width: 100%;
-    border-radius: 3px;
-    margin-top: 20px;
+    border-radius: 3px;    
+    object-fit: contain;
 }
 .podcast-grande .pg-info {
     font-size: 13px;
@@ -752,6 +792,7 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     align-items: center;
     font-weight: 600;
     font-size: 13px;
+    cursor: pointer;
 }
 .podcast-grande .pg-footer .btn-play-pg {
     margin-right: 10px;
@@ -951,8 +992,15 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     }
 
     /* Podcast grandes */
+    .contenedor-podcast-grandes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        margin: auto;
+        gap: 40px;
+    }
     .podcast-grande .icon-nombre-podcast {
-       width: 80%;
+       width: 90%;
    }
     .podcast-grande .icon-nombre-podcast h1 {
         font-size: 26px;
