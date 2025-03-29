@@ -826,7 +826,7 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
 @media only screen and (min-width: 1400px) {
     /* Las mas sonadas */
     .contenedor-las-mas-sonadas {
-        width: 65%;
+        width: 95%;
     }
     .las-mas-sonadas {
         height: 450px;
@@ -901,6 +901,9 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     }
     .contenido .tu-biblioteca {
         width: 32%;
+    }
+    .contenedor-tuspoiler-crear {
+        width: 24%;
     }
     .contenedor-tuspoiler-crear div {
         gap: 15px;
@@ -990,6 +993,10 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     .contenedor-filtro-recomendaciones .btn-filtro {
         padding: 10px 18px;
         font-size: 13px;
+    }
+
+    .contenedor-las-mas-sonadas {
+        width: 65%;
     }
 
     /* Podcast grandes */
