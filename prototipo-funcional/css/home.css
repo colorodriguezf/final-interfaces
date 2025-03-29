@@ -200,7 +200,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 25%; 
+    width: 28%; 
     gap: 25px;
     justify-content: space-between;
     background-color: black;
@@ -245,8 +245,9 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 }
 .contenido .recomendaciones {
     height: 100vh;
-    overflow-y: auto;
     width: 97%;
+    overflow-y: auto;
+    overflow-x: hidden;
     /* background-color: blue; */
 }
 .contenido .recomendaciones::-webkit-scrollbar {
@@ -283,7 +284,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .tus-playlist ul {
     list-style: none;
     padding-left: 0px;
-    margin-top: 210px;
+    margin-top: 140px;
 }
 .tus-playlist ul li {
     display: flex;

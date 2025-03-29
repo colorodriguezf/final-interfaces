@@ -76,21 +76,35 @@ li_filtro.forEach(li => {
 // Recomendaciones
 // Filtros (todos, musica, podcast)
 let btns_filtro = document.querySelectorAll('.btn-filtro');
+let musicaItems = document.querySelectorAll('.musica');
+let podcastItems = document.querySelectorAll('.podcast');
+
 btns_filtro.forEach(boton => {
     boton.addEventListener('click', () => {
         btns_filtro.forEach(b => b.classList.remove('activo'));
         boton.classList.add('activo');
+        let filtroSeleccionado = boton.textContent.trim();
+        if (filtroSeleccionado === 'Música') {
+            musicaItems.forEach(item => item.style.display = 'block');
+            podcastItems.forEach(item => item.style.display = 'none');
+        } else if (filtroSeleccionado === 'Podcast') {
+            podcastItems.forEach(item => item.style.display = 'block');
+            musicaItems.forEach(item => item.style.display = 'none');
+        } else {
+            musicaItems.forEach(item => item.style.display = 'block');
+            podcastItems.forEach(item => item.style.display = 'block');
+        }
     });    
 });
 
 // Filtro contenido izqueirda (musica, podcast)
-let btns_filtro_tus = document.querySelectorAll('.btn-filtro-tus');
-btns_filtro_tus.forEach(boton => {
-    boton.addEventListener('click', () => {
-        btns_filtro_tus.forEach(b => b.classList.remove('activo'));
-        boton.classList.add('activo');
-    });    
-});
+// let btns_filtro_tus = document.querySelectorAll('.btn-filtro-tus');
+// btns_filtro_tus.forEach(boton => {
+//     boton.addEventListener('click', () => {
+//         btns_filtro_tus.forEach(b => b.classList.remove('activo'));
+//         boton.classList.add('activo');
+//     });    
+// });
 
 // Quitar publicidad 
 let publicidad = document.querySelector(".publicidad-playlist");

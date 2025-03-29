@@ -4,6 +4,7 @@
     align-items: center;
     margin-top: 50px;
     padding: 0px 20px;
+    width: 90%;
 }
 
 .footer-left {
@@ -76,7 +77,7 @@
 }
 
 .footer-abajo .logo-container img {
-    width: 180px;
+    width: 160px;
 }
 
 @media only screen and (min-width: 1600px) {
