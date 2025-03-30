@@ -197,3 +197,21 @@ document.querySelectorAll('.corazon-card').forEach(card => {
     });
 });
 
+// Reproductor
+// Cambio de img en el reproductor al hacer hover
+document.querySelectorAll('.btn-reproductor img').forEach(img => {
+    let srcOriginal = img.getAttribute("src");
+    let srcHover = srcOriginal.replace('.svg', '-hover.svg');
+
+    img.addEventListener("mouseenter", () => img.setAttribute("src", srcHover));
+    img.addEventListener("mouseleave", () => img.setAttribute("src", srcOriginal));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    let img = document.querySelector('.rep-derecho img.expandir');
+    let srcOriginal = img.getAttribute("src");
+    let srcHover = srcOriginal.replace('.svg', '-hover.svg');
+
+    img.addEventListener("mouseenter", () => img.setAttribute("src", srcHover));
+    img.addEventListener("mouseleave", () => img.setAttribute("src", srcOriginal));
+});

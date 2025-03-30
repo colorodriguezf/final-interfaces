@@ -820,6 +820,112 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     font-size: 12px;
 }
 
+/* ----------------------------------------------------------------- */
+/* Reproductor */
+section.reproductor {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f221f;  /*color secundario simil negro */
+    padding: 12px;
+    z-index: 5;
+    margin-left: -20px; /* esto para compensar el padding del body */
+}
+/* Izquierda */
+section.reproductor .rep-izquierdo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 20px;
+}
+section.reproductor .rep-izquierdo div img {
+    width: 53px;
+    height: 58px;
+    border-radius: 100%;
+}
+section.reproductor .rep-izquierdo div img.like-reproductor {
+    width: 15px;
+    height: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+section.reproductor .rep-izquierdo div h1, section.reproductor .rep-izquierdo div p {
+    margin: 0px;
+}
+section.reproductor .rep-izquierdo div h1 {
+    font-size: 14px;
+}
+section.reproductor .rep-izquierdo div p {
+    font-size: 11px;
+}
+/* Medio */
+section.reproductor .rep-medio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+section.reproductor .rep-medio .btn-reproductor {
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+}
+section.reproductor .rep-medio .tiempo {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    gap: 7px;
+}
+section.reproductor .rep-medio .tiempo span {
+    color: #e8e8e8;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+section.reproductor .rep-medio .tiempo .barra-tiempo {
+    position: relative;
+    width: 303px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+section.reproductor .rep-medio .tiempo .barra-tiempo .progreso {
+    width: 50%;
+    height: 100%;
+    background: var(--sombra1-primario-color);
+    transition: width 0.5s linear;
+}
+/* Derecha */
+section.reproductor .rep-derecho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+section.reproductor .rep-derecho img {
+    cursor: pointer;
+}
+section.reproductor .rep-derecho .barra-volumen{
+    position: relative;
+    width: 151px;
+    height: 4px;
+    margin-left: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+section.reproductor .rep-derecho .barra-volumen .progreso {
+    width: 80%;
+    height: 100%;
+    background: var(--sombra1-primario-color);
+    transition: width 0.5s linear;
+}
+section.reproductor .rep-derecho img.expandir {
+    margin-left: 60px;
+    width: 22px;
+}
 
 /* ----------------------------------------- */
 
