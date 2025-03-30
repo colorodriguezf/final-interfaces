@@ -935,7 +935,7 @@ section.contenido-playlist {
     background: linear-gradient(to bottom, #4bc3afb5, #4bc3af03);
     border-radius: 7px;
 }
-section.contenido-playlist .encabezado-playlist {
+section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlist .encabezado-playlist {
     display: flex;
     gap: 40px;
     border-bottom: solid 0.5px rgba(141, 141, 141, 0.634);
@@ -1028,7 +1028,7 @@ td.td-titulo div p {
     margin: 0px;
 }
 
-/* Opciones del menu desplegable ... */
+/* Opciones del menu desplegable ... dentro de la playlist */
 .menu-desplegable-playlist {
     display: none;
     position: absolute;
@@ -1067,6 +1067,91 @@ td.td-titulo div p {
 .menu-desplegable-playlist.show {
     display: block;
 }
+
+/* ------------------------------------------ */
+/* Opciones del menu desplegable ...  en crear*/
+.menu-desplegable-crear {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    background-color: #333333;
+    width: 240px;
+    border-radius: 5px;
+}
+.menu-desplegable-crear ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+.menu-desplegable-crear ul hr {
+    height: 0.5px;
+    background-color: rgb(93, 93, 93);
+    border: none;
+    margin: 0px;
+}
+.menu-desplegable-crear ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(231, 231, 231);
+    height: 100%;
+
+}
+.menu-desplegable-crear ul li:hover {
+    background-color: #4d4d4d;
+    border-radius: 5px;
+}
+.menu-desplegable-crear.show {
+    display: block;
+}
+/* -------------------------------- */
+/* Crear playlist */
+section.contendio-crear-playlist {
+    display: none;
+    background: linear-gradient(to bottom, #f9405fcd, #4bc3af03);
+    padding: 20px;
+    border-radius: 7px;
+    height: 80vh;
+}
+
+/* Buscador del CREAR playlist */
+.buscador-crear-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buscador-crear-container .buscador {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 14px;
+    background-color: #333333;
+}
+
+.buscador-crear-container .buscador svg {
+    margin-right: 10px;
+    color: #dadada;
+}
+
+.buscador-crear-container .buscador input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    width: 300px;
+}
+
+.buscador-crear-container .buscador input::placeholder {
+    color: #e4e4e4;
+}
+
 
 /* ----------------------------------------- */
 

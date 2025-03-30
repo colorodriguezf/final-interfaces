@@ -219,15 +219,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Mostrar playlis cuando se clickea solo en la playlist ROCK NACIONAL
+//Mostrar contenido del crear PLAYLIST
 document.addEventListener("DOMContentLoaded", function () {
     let playlistRockNacional = document.querySelector("li.rockNacional");
+    let btnCrear = document.querySelector(".btn-crear");
+
     let contenedorPlaylist = document.querySelector(".contenedor-playlist");
-    let contenidoPlaylist = document.querySelector("section.contenido-playlist");
     let filtros = document.querySelector(".contenedor-recomendaciones-filtro");
+
+    let contenidoPlaylist = document.querySelector("section.contenido-playlist");
+    let contenidoCrear = document.querySelector("section.contendio-crear-playlist");
 
     playlistRockNacional.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
         contenidoPlaylist.style.display = 'block';
+        contenidoCrear.style.display = 'none';
+        filtros.style.display = 'none';
+    });
+    btnCrear.addEventListener("click", function () {
+        contenedorPlaylist.style.display = 'none';
+        contenidoCrear.style.display = 'block';
+        contenidoPlaylist.style.display = 'none';
+        filtros.style.display = 'none';
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let btnCrear = document.querySelector(".btn-crear");
+    let contenedorPlaylist = document.querySelector(".contenedor-playlist");
+    let contenidoCrear = document.querySelector("section.contendio-crear-playlist");
+    let filtros = document.querySelector(".contenedor-recomendaciones-filtro");
+
+    btnCrear.addEventListener("click", function () {
+        contenedorPlaylist.style.display = 'none';
+        contenidoCrear.style.display = 'block';
         filtros.style.display = 'none';
     });
 });
@@ -240,7 +265,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let dropdownMenu = document.querySelector(".menu-desplegable-playlist");
     
     opcionesBtn.addEventListener("click", function () {
-        console.log("AJSHJAS")
         dropdownMenu.classList.toggle("show");
     });
 
@@ -252,4 +276,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
 });
+
+//Abrir menu cuando se aprieta en ... en crear playlist
+document.addEventListener("DOMContentLoaded", function () {
+    
+    let opcionesBtn = document.querySelector("svg.opciones-crear");
+    let dropdownMenu = document.querySelector(".menu-desplegable-crear");
+    
+    opcionesBtn.addEventListener("click", function () {
+        console.log("ASSA")
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // si clickeas afuera del menu se cierra
+    document.addEventListener("click", function (event) {
+        if (!opcionesBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+    
+});
+
 
