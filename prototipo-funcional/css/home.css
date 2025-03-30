@@ -448,6 +448,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 /* Playlist y canciones (CAROUSELES) */
 section.playlist-home {
     margin-top: 100px;
+    margin-bottom: 110px; /* como el footer esta dentro de esta seccion, agrego margin para que se vea y no lo tape el reproductor */
 }
 section.playlist-home .carousel-recomendaciones {
     /* width: auto; */
@@ -829,7 +830,7 @@ section.reproductor {
     display: flex;
     justify-content: space-between;
     background-color: #0f221f;  /*color secundario simil negro */
-    padding: 12px;
+    padding: 14px 12px 14px 30px;
     z-index: 5;
     margin-left: -20px; /* esto para compensar el padding del body */
 }
