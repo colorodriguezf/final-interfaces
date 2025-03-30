@@ -64,9 +64,9 @@ section.faq-title h1 img {
   /* Preguntas */
   section.preguntas {
     width: 65%;
-    height: 80vh;
     margin: auto;
     margin-top: 20vh;
+    margin-bottom: 25vh;
   }
   section.preguntas .accordion .accordion-item {
     margin-top: 20px;
