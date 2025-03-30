@@ -190,6 +190,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .contenido .tu-biblioteca {
     width: 40%;
     height: 100vh;
+    margin-bottom: 100px; /* agrego para que no tape el reproductor*/
     overflow: auto;
 }
 .contenedor-crear-playlist {
