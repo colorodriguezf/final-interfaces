@@ -207,6 +207,7 @@ document.querySelectorAll('.btn-reproductor img').forEach(img => {
     img.addEventListener("mouseleave", () => img.setAttribute("src", srcOriginal));
 });
 
+// Img de expandir
 document.addEventListener("DOMContentLoaded", () => {
     let img = document.querySelector('.rep-derecho img.expandir');
     let srcOriginal = img.getAttribute("src");
@@ -215,3 +216,40 @@ document.addEventListener("DOMContentLoaded", () => {
     img.addEventListener("mouseenter", () => img.setAttribute("src", srcHover));
     img.addEventListener("mouseleave", () => img.setAttribute("src", srcOriginal));
 });
+
+
+// Mostrar playlis cuando se clickea solo en la playlist ROCK NACIONAL
+document.addEventListener("DOMContentLoaded", function () {
+    let playlistRockNacional = document.querySelector("li.rockNacional");
+    let contenedorPlaylist = document.querySelector(".contenedor-playlist");
+    let contenidoPlaylist = document.querySelector("section.contenido-playlist");
+    let filtros = document.querySelector(".contenedor-recomendaciones-filtro");
+
+    playlistRockNacional.addEventListener("click", function () {
+        contenedorPlaylist.style.display = 'none';
+        contenidoPlaylist.style.display = 'block';
+        filtros.style.display = 'none';
+    });
+});
+
+
+//Abrir menu cuando se aprieta en ... de playlist
+document.addEventListener("DOMContentLoaded", function () {
+    
+    let opcionesBtn = document.querySelector("svg.opciones");
+    let dropdownMenu = document.querySelector(".menu-desplegable-playlist");
+    
+    opcionesBtn.addEventListener("click", function () {
+        console.log("AJSHJAS")
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // si clickeas afuera del menu se cierra
+    document.addEventListener("click", function (event) {
+        if (!opcionesBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+    
+});
+
