@@ -233,7 +233,7 @@ section.planes .contenedor-plan.recomendado .el-mas-popular {
 .contenedor-plan .costo span {
     font-size: 2.5rem;
 }
-hr {
+.contenedor-plan hr {
     border: none;
     height: 2px;
     background-color: #2C2C2C;
