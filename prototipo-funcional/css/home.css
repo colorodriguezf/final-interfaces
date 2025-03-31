@@ -324,6 +324,18 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .publicidad-playlist img {
     border-radius: 5px;
 }
+ /* Nueva playlist li */
+ .tus-playlist ul li.li-nueva-playlist {
+    display: none;
+ }
+ .tus-playlist ul li.li-nueva-playlist > div:first-child {
+    display: flex;
+    border-radius: 100%;
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+
 /* Menu desplegable tus playlist */
 .menu-tus-playlist {
     display: none;
@@ -947,8 +959,19 @@ section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlis
     margin: 0px;
     margin-left: 5px;
 }
-.encabezado-playlist div img {
+.encabezado-playlist div.contenedor-nueva-playlist {
+    width: 225px;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fb50506b;
+    border-radius: 7px;
+}
+.encabezado-playlist div.contenedor-nueva-playlist img {
     border-radius: 5px;
+    height: 100px;
+    width: 100px;
 }
 .encabezado-playlist div p {
     margin: 0px;
@@ -971,6 +994,12 @@ section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlis
     gap: 30px;
     margin-top: 15px;
     position: relative;
+}
+section.contendio-crear-playlist hr {
+    background-color: rgba(221, 221, 221, 0.288);
+    height: 0.5px;
+    border: none;
+    margin: 0px;
 }
 .bi-three-dots path{
     fill: #bdbdbd;
@@ -1306,7 +1335,6 @@ section.contendio-crear-playlist {
     .menu-tus-playlist li img {
         display: none;
     }
-
 
     /* Recomendaciones */
     /* Filtros + publicidad */

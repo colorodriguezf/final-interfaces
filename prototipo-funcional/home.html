@@ -98,6 +98,17 @@
                         <p>Playlist ● 5 canciones </p>
                     </div>
                 </li>
+                <!-- Playlist crear -->
+                <li class="li-playlist li-nueva-playlist">
+                    <div>
+                        <img src="img/icono-nueva-playlist.png" alt="">
+                    </div>     
+                    <div style="margin-top: -5px;">
+                        <p class="nombre-tus-playlist">Playlist n.º6</p>
+                        <p>Playlist ● Leo Messi </p>
+                    </div>
+                </li>
+                <!-- ------------------------------ -->
                 <li class="li-playlist rockNacional">
                     <div>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0SD1Dq1AweQN5I8QxwXxQs99ngAhKcY2s0g&s" alt="">
@@ -1244,7 +1255,7 @@
                         <div class="info-playlist">
                             <p>Playlist</p>
                             <h1>Rock Nacional</h1>
-                            <p><img src="icons/img-perfil.svg" alt=""> <strong>Leo Messi </strong> <strong> . </strong>  6 canciones</p>
+                            <p><img src="icons/img-perfil.svg" alt=""> <strong>Leo Messi </strong> <strong> ● </strong>  6 canciones</p>
                         </div>
                     </div>
                     <!-- Acciones (2 botones) -->
@@ -1261,7 +1272,7 @@
                         <!-- Menu desplegable opciones -->
                         <div class="menu-desplegable-playlist">
                             <ul>
-                                <li >
+                                <li class="eliminar-rock-nacional">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
@@ -1381,13 +1392,13 @@
                 <!-- Crear playlist -->
                  <section class="contendio-crear-playlist">
                     <div class="encabezado-playlist">
-                        <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0SD1Dq1AweQN5I8QxwXxQs99ngAhKcY2s0g&s" alt="">
+                        <div class="contenedor-nueva-playlist">
+                            <img src="img/icono-nueva-playlist.png" alt="">
                         </div>
                         <div class="info-playlist">
                             <p>Playlist</p>
                             <h1>Mi playlist n.º6</h1>
-                            <p><img src="icons/img-perfil.svg" alt=""> <strong>Leo Messi </strong> <strong> . </strong> 0 canciones</p>
+                            <p><img src="icons/img-perfil.svg" alt=""> <strong>Leo Messi </strong> <strong> ● </strong> 0 canciones</p>
                         </div>
                     </div>
                     <!-- Acciones (1 boton) -->
@@ -1400,7 +1411,7 @@
                         <!-- Menu desplegable opciones -->
                         <div class="menu-desplegable-crear">
                             <ul>
-                                <li >
+                                <li class="eliminar-nueva">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
@@ -1420,14 +1431,11 @@
                     <hr>
 
                     <h1>Descubramos contenido para tu playlist</h1>
-
                     <div class="buscador-crear-container">
                         <div class="buscador">
-                            <!-- Ícono de búsqueda -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                             </svg>
-                            <!-- Campo de entrada con placeholder -->
                             <input type="text" placeholder="Busca canciones o podcast" id="buscador">
                         </div>
                     </div>

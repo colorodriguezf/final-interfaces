@@ -236,11 +236,44 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoCrear.style.display = 'none';
         filtros.style.display = 'none';
     });
+
+    let contador = 0;
+    let li_nueva_playlist = document.querySelector(".tus-playlist ul li.li-nueva-playlist");
+
     btnCrear.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
         contenidoCrear.style.display = 'block';
         contenidoPlaylist.style.display = 'none';
         filtros.style.display = 'none';
+        if(contador == 0) {
+            li_nueva_playlist.style.display = 'flex';
+        }
+        contador++;
+    });
+
+    // Botones eliminar playlist rock y nueva playlist n6
+    let btn_eliminar_rock = document.querySelector(".eliminar-rock-nacional");
+    let btn_eliminar_nueva = document.querySelector(".eliminar-nueva");
+
+
+    btn_eliminar_rock.addEventListener("click", function () {
+        playlistRockNacional.style.display = 'none';
+
+        // mostrar contenido como antes
+        contenedorPlaylist.style.display = 'block';
+        contenidoCrear.style.display = 'none';
+        contenidoPlaylist.style.display = 'block';
+        filtros.style.display = 'block';
+    });
+    
+    btn_eliminar_nueva.addEventListener("click", function () {
+        li_nueva_playlist.style.display = 'none';
+
+         // mostrar contenido como antes
+        contenedorPlaylist.style.display = 'block';
+        contenidoCrear.style.display = 'none';
+        contenidoPlaylist.style.display = 'block';
+        filtros.style.display = 'block';
     });
 });
 
