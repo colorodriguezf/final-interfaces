@@ -1286,7 +1286,10 @@ section.contendio-crear-playlist {
 .card-resultado-busqueda:hover img.corazon-card {
    transform: scale(1.2);
 }
-.card-resultado-busqueda img {
+.card-resultado-busqueda:hover img.img-card {
+    box-shadow: 2px 5px 15px rgba(215, 48, 48, 0.113); /* derecha, abajo, blur */
+}
+.card-resultado-busqueda img.img-card {
     width: 180px;
     height: 180px;
     border-radius: 100%;
@@ -1294,16 +1297,16 @@ section.contendio-crear-playlist {
     object-fit: cover;
 }
 .card-resultado-busqueda .nombre-artista {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 1px;
+    margin-bottom: 3px;
     color: rgb(245, 245, 245);
 }
 .card-resultado-busqueda .contenedor-tipo-corazon{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 13px;
     color: rgb(237, 237, 237);
 }
 .card-resultado-busqueda .contenedor-tipo-corazon p.descripcion {
@@ -1548,4 +1551,8 @@ section.contendio-crear-playlist {
         font-size: 14px;
     }
     
+    /* Seccion resultado de la busqueda (CHARLY) */
+    .contenido-resultado-busqueda {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
