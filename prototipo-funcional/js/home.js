@@ -292,7 +292,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // resultados busquerda
+    // resultados busqueda
+    //al clickear en el input ya te escribe CHARLY popr defecto
+    let input = document.querySelector(".input-buscador");
+    document.querySelector(".buscador").addEventListener("click", function() {
+        input.value = "Charly"; 
+    });
+
     let btn_busqueda = document.querySelector(".icono-buscar");
     btn_busqueda.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
