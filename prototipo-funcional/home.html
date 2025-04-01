@@ -27,7 +27,7 @@
         <div class="contenedor-logo-nav"><a href="../prototipo-funcional/home.html"><img class="img-logo-nav" src="img/spoiler-five-inc-logo-byn.png" alt=""></a></div>
         <div class="nav-center">
             <div class="buscador">
-                <img src="icons/lupa.svg" alt="">
+                <img class="icono-buscar" src="icons/lupa.svg" alt="">
                 <input type="text" placeholder="¿Qué quieres escuchar?">
             </div>
         </div>
@@ -98,7 +98,7 @@
                     <div>
                         <img src="img/img-tus-megusta.png" alt="">
                     </div>     
-                    <div style="margin-top: -5px;">
+                    <div>
                         <p class="nombre-tus-playlist">Tus me gusta</p>
                         <p>Playlist ● 5 canciones </p>
                     </div>
@@ -169,6 +169,14 @@
                     <button class="btn-filtro activo" type="button">Todo</button>
                     <button class="btn-filtro" type="button">Música</button>
                     <button class="btn-filtro" type="button">Podcast</button>
+
+                    <!-- filtro para resultado de la busqueda -->
+                    <button class="btn-filtro activo filtro-resultado-busqueda" type="button">Artistas</button>
+                    <button class="btn-filtro filtro-resultado-busqueda" type="button">Todo</button>
+                    <button class="btn-filtro filtro-resultado-busqueda" type="button">Música</button>
+                    <button class="btn-filtro filtro-resultado-busqueda" type="button">Podcast</button>
+                    <button class="btn-filtro filtro-resultado-busqueda" type="button">Álbumes</button>
+                    <button class="btn-filtro filtro-resultado-busqueda" type="button">Perfiles</button>
                 </div>
                 <!-- <div class="contenedor-publicidad">
                     <img src="img/publicidad-adidas.png" alt="">
@@ -1251,6 +1259,230 @@
 
                 </div>
 
+
+                <!-- Resultado de la busqueda (charly) -->
+                <section class="resultado-busqueda">
+                    
+                    <div class="contenido-resultado-busqueda">
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-garcia.png" alt="">
+                            <h1 class="nombre-artista">Charly Garcia</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-wonka.png" alt="">
+                            <h1 class="nombre-artista">Charly Wonka</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-chaplin.png" alt="">
+                            <h1 class="nombre-artista">Charly Chaplin</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-brown.png" alt="">
+                            <h1 class="nombre-artista">Charly Brown</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-brown-jr.png" alt="">
+                            <h1 class="nombre-artista">Charly Brown JR</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly.png" alt="">
+                            <h1 class="nombre-artista">Charly</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-alcaraz.png" alt="">
+                            <h1 class="nombre-artista">Charly Alcaraz</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-berloq.png" alt="">
+                            <h1 class="nombre-artista">Charly Berloq</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charly-black.png" alt="">
+                            <h1 class="nombre-artista">Charly Black</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/charle-puth.png" alt="">
+                            <h1 class="nombre-artista">Charly Puth</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+                        <!-- Relacionados -->
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/sui-generis.png" alt="">
+                            <h1 class="nombre-artista">Sui Generis</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/virus.png" alt="">
+                            <h1 class="nombre-artista">Virus</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/gustavo-ceratti.png" alt="">
+                            <h1 class="nombre-artista">Gustavo Ceratti</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/las-pelotas.png" alt="">
+                            <h1 class="nombre-artista">Las Pelotas</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Spinetta</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <div class="card-resultado-busqueda">
+                            <img src="img/resultado-busqueda/spinetta.png" alt="">
+                            <h1 class="nombre-artista">Spinetta</h1>
+                            <div class="contenedor-tipo-corazon">
+                                <p class="descripcion">Artista</p>
+                                <img class="corazon-card" src="icons/corazon-gris.svg" alt="">                         
+                            </div>
+                            <button class="btn-play-resultado">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+
+
+
                  <!-- Contenido de la playlist seleccionada -->
                 <section class="contenido-playlist">
                     <div class="encabezado-playlist">
@@ -1296,9 +1528,7 @@
                                     Editar detalles
                                 </li>
                             </ul>
-                        </div>
-
-                     
+                        </div>                     
                         
                         <!-- Modal compartir -->
                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -1481,7 +1711,7 @@
 
                     <hr>
 
-                    <h1>Descubramos contenido para tu playlist</h1>
+                    <h1 class="h1-nueva-playlist">Descubramos contenido para tu playlist</h1>
                     <div class="buscador-crear-container">
                         <div class="buscador">
                             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

@@ -220,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Mostrar playlis cuando se clickea solo en la playlist ROCK NACIONAL
 //Mostrar contenido del crear PLAYLIST
+// Mostrar resultado de la busqueda (charly)
 document.addEventListener("DOMContentLoaded", function () {
     let playlistRockNacional = document.querySelector("li.rockNacional");
     let btnCrear = document.querySelector(".btn-crear");
@@ -227,14 +228,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let contenedorPlaylist = document.querySelector(".contenedor-playlist");
     let filtros = document.querySelector(".contenedor-recomendaciones-filtro");
 
+    //contenido: playlist rock nacional, crear playlist, y resultado busquead
     let contenidoPlaylist = document.querySelector("section.contenido-playlist");
     let contenidoCrear = document.querySelector("section.contendio-crear-playlist");
+    let contenidoBusqueda = document.querySelector("section.resultado-busqueda");
+
+    // al iniciar saco los filtros del resultado de la busqueda (por defecto no estan)
+    document.querySelectorAll("button.filtro-resultado-busqueda").forEach(boton => {
+        boton.style.display = 'none';
+    }); 
+    contenidoBusqueda.style.display = 'none'; //si estoy en los resultados y vuelvo al home via icono del nav, no desaparece. por eso lo saco aca
 
     playlistRockNacional.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
-        contenidoPlaylist.style.display = 'block';
         contenidoCrear.style.display = 'none';
         filtros.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
+        contenidoPlaylist.style.display = 'block';
     });
 
     let contador = 0;
@@ -242,9 +252,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btnCrear.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
-        contenidoCrear.style.display = 'block';
         contenidoPlaylist.style.display = 'none';
         filtros.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
+        contenidoCrear.style.display = 'block';
         if(contador == 0) {
             li_nueva_playlist.style.display = 'flex';
         }
@@ -262,6 +273,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // mostrar contenido como antes
         contenedorPlaylist.style.display = 'block';
         contenidoCrear.style.display = 'none';
+        filtros_busqueda.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
         contenidoPlaylist.style.display = 'block';
         filtros.style.display = 'block';
     });
@@ -273,22 +286,33 @@ document.addEventListener("DOMContentLoaded", function () {
         contenedorPlaylist.style.display = 'block';
         contenidoCrear.style.display = 'none';
         contenidoPlaylist.style.display = 'block';
+        filtros_busqueda.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
         filtros.style.display = 'block';
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    let btnCrear = document.querySelector(".btn-crear");
-    let contenedorPlaylist = document.querySelector(".contenedor-playlist");
-    let contenidoCrear = document.querySelector("section.contendio-crear-playlist");
-    let filtros = document.querySelector(".contenedor-recomendaciones-filtro");
 
-    btnCrear.addEventListener("click", function () {
+    // resultados busquerda
+    let btn_busqueda = document.querySelector(".icono-buscar");
+    btn_busqueda.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
-        contenidoCrear.style.display = 'block';
-        filtros.style.display = 'none';
+        contenidoCrear.style.display = 'none';
+        contenidoPlaylist.style.display = 'none';
+
+        // filtros dentro de la busqueda
+        filtros.style.display = 'block'; //muestro todos
+         // al iniciar saco los filtros del resultado de la busqueda
+         document.querySelectorAll("button.btn-filtro").forEach(boton => {
+            boton.style.display = 'none'; //saco los de las recomendaciones del home
+        }); 
+        document.querySelectorAll("button.filtro-resultado-busqueda").forEach(boton => {
+            boton.style.display = 'block'; //muestro los de la busqueda
+        }); 
+        contenidoBusqueda.style.display = 'block';
+
     });
 });
+
 
 
 //Abrir menu cuando se aprieta en ... de playlist
@@ -317,7 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let dropdownMenu = document.querySelector(".menu-desplegable-crear");
     
     opcionesBtn.addEventListener("click", function () {
-        console.log("ASSA")
         dropdownMenu.classList.toggle("show");
     });
 
