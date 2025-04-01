@@ -1445,6 +1445,9 @@ section.contendio-crear-playlist {
     }
 
     /* Tus playlist */
+    .tus-playlist ul {
+        margin-top: 150px;
+    }
     .tus-playlist ul li {
         gap: 10px;
         padding: 10px;
@@ -1456,12 +1459,12 @@ section.contendio-crear-playlist {
         border-radius: 7px;
     }
     .tus-playlist ul li div .nombre-tus-playlist {
-        font-size: 13px;
+        font-size: 14px;
         color:rgba(255, 255, 255, 0.936);
         font-weight: 600;
     }
     .tus-playlist ul li div p {
-        font-size: 12px;
+        font-size: 13px;
         color:rgba(197, 197, 197, 0.946);
     }
     /* Menu desplegable tus playlist */
