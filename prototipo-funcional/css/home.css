@@ -944,7 +944,7 @@ section.reproductor .rep-derecho img.expandir {
 section.contenido-playlist {
     display: none;
     padding: 20px;
-    background: linear-gradient(to bottom, #4bc3afb5, #4bc3af03);
+    background: linear-gradient(to bottom, #4bc3afa2, #4bc3af03);
     border-radius: 7px;
 }
 section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlist .encabezado-playlist {
@@ -958,6 +958,7 @@ section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlis
     font-size: 4rem;
     margin: 0px;
     margin-left: 5px;
+    font-weight: 600;
 }
 .encabezado-playlist div.contenedor-nueva-playlist {
     width: 225px;
@@ -986,6 +987,11 @@ section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlis
     justify-content: flex-end;
     padding-bottom: 20px;
 }
+.encabezado-playlist .info-playlist h1.reproducciones {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #ececec;
+}
 
 /* Acciones playlist */
 .acciones-playlist {
@@ -1001,10 +1007,10 @@ section.contendio-crear-playlist hr {
     border: none;
     margin: 0px;
 }
-.bi-three-dots path{
-    fill: #bdbdbd;
+.bi-three-dots path, .bi-share-fill path{
+    fill: #dfdfdf;
 }
-.acciones-playlist .opciones {
+.acciones-playlist .opciones, .acciones-playlist .compartir {
     cursor: pointer;
 }
 .btn-play-playlist {
@@ -1019,7 +1025,7 @@ section.contendio-crear-playlist hr {
     filter: brightness(95%);
 }
 /* Tabla de canciones */
-table.table {
+table.tabla {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 10px;
@@ -1028,7 +1034,7 @@ thead tr th {
     text-align: left;
 
 }
-.table thead th {
+.tabla thead th {
     border-bottom: 0.2px solid #dddddd29;
     padding: 10px;
 }
@@ -1179,6 +1185,74 @@ section.contendio-crear-playlist {
 
 .buscador-crear-container .buscador input::placeholder {
     color: #e4e4e4;
+}
+/* ---------------------------------------- */
+/* Modal compartir playlist */
+.modal-body .contenedor-modal-redes {
+    display: flex;
+}
+.modal-body {
+    padding: 10px 1rem;
+}
+.modal-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.modal-encabezado img {
+    width: 35px;
+}
+.modal-encabezado button {
+    width: 8px;
+    height: 2px;
+}
+.modal-body h1 {
+    font-size: 22px;
+    color: black;
+    font-weight: 600;
+}
+.modal-body p {
+    color: rgb(130, 130, 130);
+    font-size: 14px;
+}
+.modal-body p, .modal-body h1 {
+    margin-left: 30px;
+}
+.modal-body .contenedor-modal-redes .contenedor-red {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 13px;
+    gap: 5px;
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+.modal-body .contenedor-modal-redes .contenedor-red img {
+    width: 60px;
+}
+.modal-footer {
+    border: none;
+}
+.modal-footer div {
+    width: 85%;
+    margin: auto;
+    border: solid 1px rgba(128, 128, 128, 0.528);
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.modal-footer div input {
+    width: 90%;
+    border: none;
+    color: rgba(63, 63, 63, 0.528);
+    font-size: 14px;
+}
+.modal-footer div img {
+    cursor: pointer;
+    width: 21px;
 }
 
 
