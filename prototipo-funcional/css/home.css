@@ -49,7 +49,7 @@ nav.nav-home {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0px;
+    padding: 15px 80px 15px 10px;
     position: sticky;
     top:0px;
     z-index: 10;
@@ -133,7 +133,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
 .menu-desplegable {
     position: absolute;
     top: 65px;
-    right: 5px;
+    right: 80px;
     background-color: var(--background-btn);
     border-radius: 8px;
     width: 180px;
@@ -1402,7 +1402,7 @@ section.contendio-crear-playlist {
     /* Estilos del menú desplegable */
     .menu-desplegable {
         position: absolute;
-        top: 80px;
+        top: 65px;
         right: 160px;
         background-color: var(--background-btn);
         border-radius: 8px;
