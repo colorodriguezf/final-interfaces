@@ -4,16 +4,15 @@
 ## Spoiler Five Inc.
 “Spoiler Five Inc.” es una aplicación multiplataforma argentina, empleada para la reproducción de música vía streaming. Cuenta con un modelo de negocio «premium», un servicio gratuito básico y con publicidad; pero con características adicionales, con una mejor calidad de audio, a través de una suscripción de pago.
 
-## ℹ️ Aclaración  
-Las siguientes características están optimizadas para dispositivos con una resolución de **1200px o superior**.
-
 ## 🚀 Prototipo Funcional
-Estas se podran ver seleccionando la cuarta opcion: **Prototipo funcional (HTML, CSS, JS)**
+Este se podra ver seleccionando la cuarta opcion: **Prototipo funcional (HTML, CSS, JS)**
 
 **clickear en la img para ir al prototipo**
 
 [![Buscar Música](img-ruta/prototipo-funcional.png)](https://colorodriguezf.github.io/final-interfaces/prototipo-funcional/index.html)
 
+## ℹ️ Aclaración  
+Las siguientes características están optimizadas para dispositivos con una resolución de **1200px o superior**.
 
 ## Características
 Se deberá diseñar la interfaz de un sitio web que soporte las siguientes características:
