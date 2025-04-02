@@ -7,9 +7,16 @@
 ## ℹ️ Aclaración  
 Las siguientes características están optimizadas para dispositivos con una resolución de **1200px o superior**.
 
+## 🚀 Prototipo Funcional
+Estas se podran ver seleccionando la cuarta opcion: **Prototipo funcional (HTML, CSS, JS)**
+
+**clickear en la img para ir al prototipo**
+
+[![Buscar Música](img-ruta/prototipo-funcional.png)](https://colorodriguezf.github.io/final-interfaces/prototipo-funcional/index.html)
+
+
 ## Características
 Se deberá diseñar la interfaz de un sitio web que soporte las siguientes características:
-
 
 
 ## 1. **Buscar Música o Podcasts o lo que sea (audios)**  
