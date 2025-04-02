@@ -75,7 +75,7 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
      
      ![FAQ](img-ruta/punto10-faq.png)  
 
-## 11. ** Ver sugerencias personalizadas**  
+## 11. **Ver sugerencias personalizadas**  
    Recomendaciones basadas en los gustos del usuario.  
 
    - **Ejemplo: Carrusel de música relacionada con el Rock Nacional**  
@@ -83,14 +83,18 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
      ![Sugerencias](img-ruta/punto11-sugerencia.png)  
 
 ## 12. **Ver recomendaciones destacadas**  
-   Listas de reproducción sugerida en base a la reproducción ddel usuario.  
+   Listas de reproducción sugerida en base a la reproducción del usuario.  
 
    - **Carrusel con música similar a la que escucha el usuario**  
      
      ![Recomendaciones](img-ruta/punto12-recomendacion1.png)  
 
-## 13. **Recibir y ver notificaciones personalizadas**  
-   Recibir avisos sobre novedades, lanzamientos y actualizaciones según las preferencias del usuario.  
+## 13. **Recibir y ver notificaciones personalizadas**   
+
+   - **En la primera imagen**, vemos el icono de **notificacion** con un circulo rojo, indicando 2 nuevas notificaciones.  
+   - **En la segunda imagen**, se muestra el modal abierto con las notificaciones recibidas. Entre ellas: **me gustas en playlist** y **notificaciones personalizadas** .
+
+     ![Notificacion](img-ruta/punto13-notificacion.png)  
 
 ## 14. **Guardar audios, podcasts, o playlists favoritos**  
 
