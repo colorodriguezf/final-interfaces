@@ -95,7 +95,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     border: solid 1px var(--bg-color-light);
 }
 .notificacion {
-    width: 25px;
+    width: 33px;
     filter: grayscale(100%) brightness(50%); /* como el icono que baje es blanco, le pongo filtro para volverlo mas gris */
 }
 
@@ -104,7 +104,7 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 45px;
 }
 .profile-container {
     display: flex;
@@ -128,8 +128,80 @@ nav.nav-home .contenedor-logo-nav img.img-logo-nav {
     object-fit: cover;
 }
 
-/* Menu desplegable perfil */
+/* Menu desplegable perfil y notificacion (comparten estilos) */
 /* Estilos del menú desplegable */
+/* Notificacion */
+.contenedor-notificacion {
+    position: relative;
+    cursor: pointer;
+}
+.menu-desplegable.md-notificacion {
+    position: absolute;
+    top: 65px;
+    right: 160px;
+    background-color: var(--background-btn);
+    border-radius: 8px;
+    width: 350px;
+    display: none;
+    flex-direction: column;
+    z-index: 6;
+}
+.notificacion-nueva {
+    position: absolute;
+    background-color: var(--primario-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    right: 0px;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-weight: bold;
+}
+ul.list-notificacion li {
+    cursor: pointer;
+}
+ul.list-notificacion div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ul.list-notificacion div p {
+    margin: 0px;
+    font-size: 0.9rem;
+}
+ul.list-notificacion img {
+    /* object-fit: contain; */
+    width: 30px;
+    height: 30px;
+}
+ul.list-notificacion span.hace {
+    font-size: 12px;
+    font-weight: 0;
+    color: rgba(235, 235, 235, 0.907);
+    margin-left: 40px;
+}
+.md-notificacion h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 20px 0px 0px 15px;
+}
+.md-notificacion .contenedor-ver-mas-antiguas {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0px 10px 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+.md-notificacion .contenedor-ver-mas-antiguas p {
+    margin: 0px;
+}
+/* Perfil */
 .menu-desplegable {
     position: absolute;
     top: 65px;
@@ -1376,7 +1448,7 @@ section.contendio-crear-playlist {
     }
         
     .notificacion {
-        width: 27px;
+        width: 35px;
     }
 
     .contenedor-tuspoiler-crear .buscador {
@@ -1390,7 +1462,7 @@ section.contendio-crear-playlist {
     
     /* Perfil */
     .nav-derecha {
-        gap: 25px;
+        gap: 60px;
         padding-right: 160px;
     }
     .profile-container {
@@ -1398,11 +1470,17 @@ section.contendio-crear-playlist {
         height: 37px;
     }
         
-    /* Menu desplegable perfil */
+    /* Menu desplegable perfil y notificacion */
+    /* Notificacion menu */
+    .menu-desplegable.md-notificacion {
+        top: 55px;
+        right: 250px;
+    }
+
     /* Estilos del menú desplegable */
     .menu-desplegable {
         position: absolute;
-        top: 65px;
+        top: 55px;
         right: 160px;
         background-color: var(--background-btn);
         border-radius: 8px;
