@@ -1069,11 +1069,11 @@ section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlis
     color: #ececec;
 }
 
-/* Acciones playlist */
+/* Acciones playlist  4 botones*/
 .acciones-playlist {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     margin-top: 15px;
     position: relative;
 }
@@ -1086,7 +1086,7 @@ section.contendio-crear-playlist hr {
 .bi-three-dots path, .bi-share-fill path{
     fill: #dfdfdf;
 }
-.acciones-playlist .opciones, .acciones-playlist .compartir {
+.acciones-playlist .menu-desplegable-playlist, .acciones-playlist .compartir {
     cursor: pointer;
 }
 .btn-play-playlist {
@@ -1099,6 +1099,29 @@ section.contendio-crear-playlist hr {
     cursor: pointer;
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
     filter: brightness(95%);
+}
+
+.btn-accion {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background: #111111;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+}
+.btn-accion div:first-child {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-right: solid 1px white;
+    padding-right: 10px;
+}
+.btn-accion:hover {
+    background: #262626;
 }
 /* Tabla de canciones */
 table.tabla {
@@ -1143,8 +1166,8 @@ td.td-titulo div p {
 .menu-desplegable-playlist {
     display: none;
     position: absolute;
-    top: 45px;
-    left: 75px;
+    top: 55px;
+    left: 355px;
     background-color: #333333;
     width: 240px;
     border-radius: 5px;
