@@ -1019,8 +1019,10 @@ section.reproductor .rep-derecho img.expandir {
 /* Contenido de las playlist */
 section.contenido-playlist {
     display: none;
+}
+.encabezado-color {
+    background: linear-gradient(to bottom, #4bc3afa2, rgba(18, 196, 166, 0.067));
     padding: 20px;
-    background: linear-gradient(to bottom, #4bc3afa2, #4bc3af03);
     border-radius: 7px;
 }
 section.contenido-playlist .encabezado-playlist, section.contendio-crear-playlist .encabezado-playlist {
@@ -1128,6 +1130,7 @@ table.tabla {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 10px;
+    padding-left: 30px;
 }
 thead tr th {
     text-align: left;
@@ -1161,6 +1164,116 @@ td.td-titulo div p {
     font-size: 12px;
     margin: 0px;
 }
+
+/* COMENTARIOS EN LA PLAYLIST */
+section.comentarios {
+    margin-top: 50px;
+    padding: 0px 30px;
+}
+section.comentarios img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: solid 1px rgba(255, 255, 255, 0.878);
+}
+h1.cantidad-comentarios {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+}
+.agregar-comentario {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.agregar-comentario input {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    color: #A7A7A7;
+    border-bottom: solid 1px #A7A7A7;
+}
+
+/* Caja comentario */
+/* Comentario izq */
+
+
+/* Comentario der */
+.comentario-der {
+    display: flex;
+    flex-direction: column;
+}
+.comentario-der .usuario-tiempo {
+    display: flex;
+    gap: 20px;
+}
+.comentario-der h1 {
+    margin: 0px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.comentario-der span {
+    color: #A7A7A7;
+    font-size: 13px;
+}
+.comentario-der p {
+    font-size: 1rem;
+    font-weight: 0;
+    color: white;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.contenedor-comentario {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;    
+}
+.contenedor-likes-comentario {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+.contenedor-likes-comentario div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.contenedor-likes-comentario div button.responder {
+    border: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.contenedor-likes-comentario div button.responder:hover {
+    background: #5B5B5B;
+}
+
+.comentario-der button.btn-cant-respuestas {
+    border: none;
+    background: none;
+    color: var(--primario-color);
+    font-weight: bold;
+    padding: 7px 17px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: max-content;
+}
+.comentario-der button.btn-cant-respuestas:hover {
+    background: var(--sombra2-primario-color);
+}
+
 
 /* Opciones del menu desplegable ... dentro de la playlist */
 .menu-desplegable-playlist {
