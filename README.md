@@ -68,12 +68,34 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
 
 ## 7. **Ver el resumen de una banda, autor, episodio de podcast, etc**  
 
+  - **Resumen banda/autor"**  
+     
+     ![Resumen banda/autor](img-ruta/punto7-autor.png)  
+
+   - **Resumen episodio de podcast**  
+     
+     ![Resumen podcast](img-ruta/punto7-podcast.png)  
+
+   - **Resumen cancion**  
+     
+     ![Configurar cuenta](img-ruta/punto7-cancion.png)  
+
 
 ## 8. **Calificar un audio y/o playlist**  
 
+  - **Calificar un auidio"**  
+     
+     ![Calificar audio](img-ruta/punto8-1.png)  
+
+   - **Calificar una playlist**  
+     
+     ![Calificar playlist](img-ruta/punto8-2.png)  
 
 ## 9. **Ver las calificaciones y opiniones de un determinado audio**  
 
+ - **Podemos ver las calificaciones y opiniones dentro de los recueadros naranjas**  
+     
+     ![Calificaciones y opiniones](img-ruta/punto9.png)  
 
 ## 10. **Se debe incluir una página de soporte, faq, ayuda o similar**  
 
@@ -122,6 +144,10 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
     
 ## 16. **Se debe incentivar al usuario a calificar y opinar acerca de la playlist o tema o podcast que está escuchando**  
 
+   - **Al final del reproductor podemos ver dentro del recuadro, una forma sencilla de incentivar al usuario que opine y califique lo que esta escuchando**
+
+   ![Reproductort](img-ruta/punto16.png)
+
 ## Consideraciones del equipo de análisis
 - Los usuarios valoran mucho las **sugerencias personalizadas** y la **facilidad en las búsquedas**.
 - Los **filtros complejos no se utilizan**; se recomienda un sistema de filtrado más sencillo.
@@ -141,12 +167,11 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
 
 7. **Ficha de un tema, podcast o playlist**.
 
-   - **Ficha Playlist**, se muestra detalle de la playlist con su **imagen, nombre, creador, cantidad de canciones, cantidad de reproducciones**.
-   -  Ademas se encuentran los botones de **play**, **detalles**, **guardar como favorito** y **compartir**,
 
-   ![Compartir Playlist](img-ruta/opcional7.png)  
 
 8. **Marcar un tema o playlist como favorita**.
+
+   
 
 ## Entrega
 La entrega se deberá realizar utilizando el branch `gh-pages` de GitHub, con una página `index.html` que contenga links a:
