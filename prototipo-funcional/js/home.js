@@ -246,10 +246,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ------------------------------------------------------------------------------------------
 // Mostrar playlist cuando se clickea solo en la playlist ROCK NACIONAL
-//Mostrar contenido del crear PLAYLIST
+// Mostrar contenido del crear PLAYLIST
 // Mostrar resultado de la busqueda (charly)
-//Mostra resumen autor/banda (charly)
+// Mostrar resumen autor/banda (charly)
+// Mostrar resumen audio (Rezo por vos, charly)
 document.addEventListener("DOMContentLoaded", function () {
     let playlistRockNacional = document.querySelector("li.rockNacional");
     let btnCrear = document.querySelector(".btn-crear");
@@ -263,6 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let contenidoBusqueda = document.querySelector("section.resultado-busqueda");
     let contenidoAutor = document.querySelector("section.resumen-autor");
     let contenidoPodcast = document.querySelector("section.contenido-podcast");
+    let contenidoAudio = document.querySelector("section.resumen-audio");
 
     // al iniciar saco los filtros del resultado de la busqueda (por defecto no estan)
     document.querySelectorAll("button.filtro-resultado-busqueda").forEach(boton => {
@@ -277,6 +280,8 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoBusqueda.style.display = 'none';
         contenidoAutor.style.display = 'none';
         contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
+
         contenidoPlaylist.style.display = 'block';
     });
 
@@ -291,6 +296,8 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoCrear.style.display = 'block';
         contenidoAutor.style.display = 'none';
         contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
+
         if(contador == 0) {
             li_nueva_playlist.style.display = 'flex';
         }
@@ -312,6 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoAutor.style.display = 'none';
         contenidoBusqueda.style.display = 'none';
         contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
 
         contenidoPlaylist.style.display = 'block';
         filtros.style.display = 'block';
@@ -327,6 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoBusqueda.style.display = 'none';
         contenidoAutor.style.display = 'none';
         contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
 
         contenidoPlaylist.style.display = 'block';
         filtros.style.display = 'block';
@@ -347,6 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoPlaylist.style.display = 'none';
         contenidoAutor.style.display = 'none';
         contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
 
         // filtros dentro de la busqueda
         filtros.style.display = 'block'; //muestro todos
@@ -363,25 +373,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mostrar contenido Autor (charly)
     let btn_charly = document.querySelectorAll(".btn-charly");
-    btn_charly.forEach(boton => {
-
-        boton.addEventListener("click", function () {
-            contenedorPlaylist.style.display = 'none';
-            contenidoCrear.style.display = 'none';
-            contenidoPlaylist.style.display = 'none';
-            contenidoBusqueda.style.display = 'none';
-            filtros.style.display = 'none';
-    
-            // Muestro contenido
-            contenidoAutor.style.display = 'block';
-    
-        });
-
+        btn_charly.forEach(boton => {
+            boton.addEventListener("click", function () {
+                contenedorPlaylist.style.display = 'none';
+                contenidoCrear.style.display = 'none';
+                contenidoPlaylist.style.display = 'none';
+                contenidoBusqueda.style.display = 'none';
+                filtros.style.display = 'none';
+                contenidoAudio.style.display = 'none';
+        
+                // Muestro contenido
+                contenidoAutor.style.display = 'block';        
+            });
     });
 
-     // Mostrar contenido PODCAST (Paren La Mano)
-     let btn_podcast = document.querySelector(".btn-podcast");
- 
+    // Mostrar contenido PODCAST (Paren La Mano)
+    let btn_podcast = document.querySelector(".btn-podcast"); 
         btn_podcast.addEventListener("click", function () {
                 contenedorPlaylist.style.display = 'none';
                 contenidoCrear.style.display = 'none';
@@ -389,10 +396,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 contenidoBusqueda.style.display = 'none';
                 filtros.style.display = 'none';
                 contenidoAutor.style.display = 'none';     
+                contenidoAudio.style.display = 'none';
         
                 // Muestro contenido
                 contenidoPodcast.style.display = 'block';  
             });
+
+
+     // Mostrar contenido AUDIO (Rezo por vos, Charly)
+     let btn_audio = document.querySelector(".btn-audio"); 
+     btn_audio.addEventListener("click", function () {
+             contenedorPlaylist.style.display = 'none';
+             contenidoCrear.style.display = 'none';
+             contenidoPlaylist.style.display = 'none';
+             contenidoBusqueda.style.display = 'none';
+             filtros.style.display = 'none';
+             contenidoAutor.style.display = 'none';     
+             contenidoPodcast.style.display = 'none';  
+             
+             // Muestro contenido
+             contenidoAudio.style.display = 'block';
+         });
 
 });
 
@@ -437,3 +461,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Mostrar mas/menos cuando se clickea en "MOSTRAR MAS" dentro del resumen de una cancion
+document.querySelector(".btn-mostrar-mas").addEventListener("click", function() {
+    let parrafo = document.querySelector(".p-mostrar-mas");
+    parrafo.classList.toggle("ver");
+
+    if (parrafo.classList.contains("ver")) {
+        this.textContent = "...Mostrar menos";
+    } else {
+        this.textContent = "...Mostrar más";
+    }
+});
