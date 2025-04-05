@@ -964,20 +964,23 @@ section.reproductor .rep-medio .btn-reproductor {
     gap: 25px;
     cursor: pointer;
 }
+.btn-reproductor img {
+    width: 30px;
+}
 section.reproductor .rep-medio .tiempo {
     display: flex;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 10px;
     gap: 7px;
 }
 section.reproductor .rep-medio .tiempo span {
     color: #e8e8e8;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1px;
 }
 section.reproductor .rep-medio .tiempo .barra-tiempo {
     position: relative;
-    width: 303px;
+    width: 500px;
     height: 4px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
@@ -993,20 +996,21 @@ section.reproductor .rep-medio .tiempo .barra-tiempo .progreso {
 section.reproductor .rep-derecho {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex: 1;
+    justify-content: end;
+    flex: 1; /*para que ocupe el 100% del espacio por mas que haya poco contenido */
 }
 section.reproductor .rep-derecho img {
     cursor: pointer;
 }
 section.reproductor .rep-derecho .barra-volumen{
     position: relative;
-    width: 151px;
+    width: 90px;
     height: 4px;
     margin-left: 16px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
     overflow: hidden;
+    cursor: pointer;
 }
 section.reproductor .rep-derecho .barra-volumen .progreso {
     width: 80%;
@@ -1015,7 +1019,7 @@ section.reproductor .rep-derecho .barra-volumen .progreso {
     transition: width 0.5s linear;
 }
 section.reproductor .rep-derecho img.expandir {
-    margin-left: 60px;
+    margin-left: 20px;
     width: 22px;
 }
 /* ----------------------------------- */
