@@ -213,6 +213,17 @@ document.querySelectorAll('.corazon-card').forEach(card => {
         }
     });
 });
+// Cambio de corazon pero sin efecto
+document.querySelectorAll('.corazon-card-sin').forEach(card => {
+    card.addEventListener('click', () => {
+        let srcActual = card.getAttribute("src");
+        if (srcActual == "icons/corazon-gris.svg") {
+            card.setAttribute("src", "icons/corazon-amarillo.svg");
+        } else {
+            card.setAttribute("src", "icons/corazon-gris.svg");
+        }
+    });
+});
 
 // Reproductor
 // Cambio de img en el reproductor al hacer hover
@@ -235,9 +246,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Mostrar playlis cuando se clickea solo en la playlist ROCK NACIONAL
+// Mostrar playlist cuando se clickea solo en la playlist ROCK NACIONAL
 //Mostrar contenido del crear PLAYLIST
 // Mostrar resultado de la busqueda (charly)
+//Mostra resumen autor/banda (charly)
 document.addEventListener("DOMContentLoaded", function () {
     let playlistRockNacional = document.querySelector("li.rockNacional");
     let btnCrear = document.querySelector(".btn-crear");
@@ -249,6 +261,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let contenidoPlaylist = document.querySelector("section.contenido-playlist");
     let contenidoCrear = document.querySelector("section.contendio-crear-playlist");
     let contenidoBusqueda = document.querySelector("section.resultado-busqueda");
+    let contenidoAutor = document.querySelector("section.resumen-autor");
+    let contenidoPodcast = document.querySelector("section.contenido-podcast");
 
     // al iniciar saco los filtros del resultado de la busqueda (por defecto no estan)
     document.querySelectorAll("button.filtro-resultado-busqueda").forEach(boton => {
@@ -261,6 +275,8 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoCrear.style.display = 'none';
         filtros.style.display = 'none';
         contenidoBusqueda.style.display = 'none';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
         contenidoPlaylist.style.display = 'block';
     });
 
@@ -273,6 +289,8 @@ document.addEventListener("DOMContentLoaded", function () {
         filtros.style.display = 'none';
         contenidoBusqueda.style.display = 'none';
         contenidoCrear.style.display = 'block';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
         if(contador == 0) {
             li_nueva_playlist.style.display = 'flex';
         }
@@ -291,7 +309,10 @@ document.addEventListener("DOMContentLoaded", function () {
         contenedorPlaylist.style.display = 'block';
         contenidoCrear.style.display = 'none';
         filtros_busqueda.style.display = 'none';
+        contenidoAutor.style.display = 'none';
         contenidoBusqueda.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
+
         contenidoPlaylist.style.display = 'block';
         filtros.style.display = 'block';
     });
@@ -302,9 +323,12 @@ document.addEventListener("DOMContentLoaded", function () {
          // mostrar contenido como antes
         contenedorPlaylist.style.display = 'block';
         contenidoCrear.style.display = 'none';
-        contenidoPlaylist.style.display = 'block';
         filtros_busqueda.style.display = 'none';
         contenidoBusqueda.style.display = 'none';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
+
+        contenidoPlaylist.style.display = 'block';
         filtros.style.display = 'block';
     });
 
@@ -321,6 +345,8 @@ document.addEventListener("DOMContentLoaded", function () {
         contenedorPlaylist.style.display = 'none';
         contenidoCrear.style.display = 'none';
         contenidoPlaylist.style.display = 'none';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
 
         // filtros dentro de la busqueda
         filtros.style.display = 'block'; //muestro todos
@@ -334,6 +360,40 @@ document.addEventListener("DOMContentLoaded", function () {
         contenidoBusqueda.style.display = 'block';
 
     });
+
+    // Mostrar contenido Autor (charly)
+    let btn_charly = document.querySelectorAll(".btn-charly");
+    btn_charly.forEach(boton => {
+
+        boton.addEventListener("click", function () {
+            contenedorPlaylist.style.display = 'none';
+            contenidoCrear.style.display = 'none';
+            contenidoPlaylist.style.display = 'none';
+            contenidoBusqueda.style.display = 'none';
+            filtros.style.display = 'none';
+    
+            // Muestro contenido
+            contenidoAutor.style.display = 'block';
+    
+        });
+
+    });
+
+     // Mostrar contenido PODCAST (Paren La Mano)
+     let btn_podcast = document.querySelector(".btn-podcast");
+ 
+        btn_podcast.addEventListener("click", function () {
+                contenedorPlaylist.style.display = 'none';
+                contenidoCrear.style.display = 'none';
+                contenidoPlaylist.style.display = 'none';
+                contenidoBusqueda.style.display = 'none';
+                filtros.style.display = 'none';
+                contenidoAutor.style.display = 'none';     
+        
+                // Muestro contenido
+                contenidoPodcast.style.display = 'block';  
+            });
+
 });
 
 
