@@ -581,10 +581,11 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
   }
   
   .slide-content {
-    height: 230px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 5px;
   }
   .slide-content .contenedor-img-card {
     position: relative;
@@ -692,6 +693,13 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     filter: brightness(110%);
 }
 
+/* Swipper redondos */
+  
+  .swiper.redondo .slide-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+  }
 
 /* Las mas sonadas */
 .contenedor-las-mas-sonadas {

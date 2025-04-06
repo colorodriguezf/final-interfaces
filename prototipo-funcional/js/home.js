@@ -199,6 +199,68 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+  var swiper = new Swiper(".mySwiper.trabajar", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next", // Solo el botón siguiente
+    },
+    loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      800: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1300: {
+        slidesPerView: 5,
+        spaceBetween: 5,
+      },
+      1600: {
+        slidesPerView: 6,
+        spaceBetween: 8,
+      },
+    },
+  });
+
+  var swiper = new Swiper(".mySwiper.redondo", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next", // Solo el botón siguiente
+    },
+    loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      800: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1300: {
+        slidesPerView: 5,
+        spaceBetween: 5,
+      },
+      1600: {
+        slidesPerView: 6,
+        spaceBetween: 8,
+      },
+    },
+  });
+
 
 //  Cambio de corazon al darle like a una card
 document.querySelectorAll('.corazon-card').forEach(card => {
