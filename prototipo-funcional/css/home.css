@@ -413,8 +413,8 @@ ul.list-notificacion span.hace {
     display: none;
     position: absolute;
     width: 140px;
-    top: 25px;
-    left: -130px;
+    top: 37px;
+    left: -115px;
     padding: 10px;
     list-style: none;
     border-radius: 5px;
@@ -1945,8 +1945,8 @@ h1.btn-mostrar-mas {
         display: none;
         position: absolute;
         /* width: 180px; */
-        top: 25px;
-        left: -168px;
+        top: 35px;
+        left: -118px;
         padding: 10px;
         list-style: none;
         border-radius: 6px;
