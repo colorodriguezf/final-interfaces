@@ -33,8 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Menu desplegable LIST tus playlist
-document.querySelector(".list").addEventListener("click", function() {
-    document.querySelector(".menu-tus-playlist").classList.toggle("show-menu-tus-playlist");
+document.addEventListener("DOMContentLoaded", function () {
+    let listBtn = document.querySelector(".list");
+    let dropdownMenu = document.querySelector(".menu-tus-playlist");
+    
+    listBtn.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("show-menu-tus-playlist");
+    });
+
+    // si clickeas afuera del menu se cierra
+    document.addEventListener("click", function (event) {
+        if (!listBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show-menu-tus-playlist");
+        }
+    });
 });
 
 let li_filtro = document.querySelectorAll('.menu-tus-playlist li');
@@ -125,9 +137,11 @@ btns_filtro.forEach(boton => {
 
 // Quitar publicidad 
 let publicidad = document.querySelector(".publicidad-playlist");
-publicidad.addEventListener("click", quitarPublicidad);
-function quitarPublicidad() {
-    publicidad.style.display = 'none';
+if(publicidad) {
+    publicidad.addEventListener("click", quitarPublicidad);
+    function quitarPublicidad() {
+        publicidad.style.display = 'none';
+    }
 }
 
 // Playlist y recomendaciones
@@ -300,11 +314,13 @@ document.querySelectorAll('.btn-reproductor img').forEach(img => {
 // Img de expandir
 document.addEventListener("DOMContentLoaded", () => {
     let img = document.querySelector('.rep-derecho img.expandir');
-    let srcOriginal = img.getAttribute("src");
-    let srcHover = srcOriginal.replace('.svg', '-hover.svg');
+    if (img) {
+        let srcOriginal = img.getAttribute("src");
+        let srcHover = srcOriginal.replace('.svg', '-hover.svg');
 
-    img.addEventListener("mouseenter", () => img.setAttribute("src", srcHover));
-    img.addEventListener("mouseleave", () => img.setAttribute("src", srcOriginal));
+        img.addEventListener("mouseenter", () => img.setAttribute("src", srcHover));
+        img.addEventListener("mouseleave", () => img.setAttribute("src", srcOriginal));
+    }
 });
 
 
