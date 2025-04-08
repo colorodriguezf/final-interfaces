@@ -643,6 +643,22 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
     gap: 20px;
     padding: 5px;
   }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    color: var(--secundario-color);
+    border-radius: 100%;
+    background-color: var(--background-btn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+ }
+  .swiper-button-next:hover, .swiper-rtl .swiper-button-prev:hover {
+        background-color: rgb(65, 65, 65);
+  }
+  .swiper-button-next::after, .swiper-rtl .swiper-button-prev::after {
+    font-size: 15px;
+    font-weight: bold;
+  }
   .slide-content .contenedor-img-card {
     position: relative;
     display: inline-block;
