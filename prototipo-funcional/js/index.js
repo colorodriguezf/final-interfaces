@@ -1,3 +1,5 @@
+"use strict";
+
 // No se pedia en el trabajo, solo es un agregado visual
 // no lo hice con html, css y js puro por el tiempo
 $(document).ready(function() {

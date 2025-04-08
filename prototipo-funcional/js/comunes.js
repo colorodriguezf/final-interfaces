@@ -1,3 +1,4 @@
+"use strict";
 // Menu desplegable notificacion
 document.addEventListener("DOMContentLoaded", function () {
     let notificacionBtn = document.getElementById("btn-notificacion");

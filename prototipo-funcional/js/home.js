@@ -1,3 +1,5 @@
+"use strict";
+
 // Menu desplegable LIST tus playlist
 document.addEventListener("DOMContentLoaded", function () {
     let listBtn = document.querySelector(".list");
