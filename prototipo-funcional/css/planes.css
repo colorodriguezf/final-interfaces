@@ -1,0 +1,240 @@
+
+.contenedor-planes-y-precios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.contenedor-planes-y-precios h1 {
+    font-size: 5rem;
+    margin: 0px;
+    font-weight: bold;
+}
+.contenedor-planes-y-precios p {
+    font-size: 1.2rem;
+    margin: 0px;
+    width: 60%;
+}
+
+/* Seccion PLANES */
+section.planes-in-planes {
+    background: linear-gradient(90deg, #0f0f0f 0%, #000000 81%);
+    text-align: center;
+    padding: 20px 5px;
+    margin-bottom: 60px;
+}
+section.planes-in-planes h1.h1-planes {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+section.planes-in-planes .contenedor-planes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 10px;
+    margin-top: 40px;
+}
+section.planes-in-planes .contenedor-plan {
+    position: relative;
+    border-radius: 15px;
+    border:solid 1px #89d6c97d;
+    width: max-content;
+    min-width: 340px;
+    min-height: 210px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 15px;
+}
+
+section.planes-in-planes .contenedor-plan .tu-plan-actual {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--acento-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Me rompia el diseño */
+
+/* section.planes-in-planes .contenedor-plan.recomendado {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+    height: 440px;
+}
+.contenedor-plan.recomendado .contenedor-data-popular {
+    position:relative;
+    top:-56px;
+}
+.el-mas-popular {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -73px;
+    right: 15px;
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: var(--secundario-color);
+    padding: 0px 15px;
+}
+section.planes-in-planes .contenedor-plan.recomendado .el-mas-popular {
+    background-color: var(#60c7b6ba);
+} */
+
+.contenedor-plan .costo {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.contenedor-plan .costo span {
+    font-size: 2.5rem;
+}
+.contenedor-plan hr {
+    border: none;
+    height: 2px;
+    background-color: #535151;
+    margin: 20px 0;
+}
+section.planes-in-planes .contenedor-plan .emnpezar-ahora {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #60c7b6eb;
+    background-color: transparent;
+    border:solid 1px #60C7B6;
+    font-size: 14px;
+}
+section.planes-in-planes .contenedor-plan .emnpezar-ahora:hover {
+    background-color: #60c7b6eb;
+    color: rgb(224, 224, 224);
+}
+section.planes-in-planes .contenedor-plan:hover {
+    box-shadow: 3px 2px 8px rgba(163, 163, 163, 0.289);
+    background-color: #111111;
+}
+section.planes-in-planes .contenedor-plan h2 {
+    color: var(--bg-color-light);
+    font-weight: 600;
+    margin: 7px;
+    font-size: 0.9rem;
+}
+section.planes-in-planes .contenedor-plan h3 {
+    margin: 7px;
+}
+section.planes-in-planes .contenedor-plan h4 {
+    font-weight: 400;
+    margin: 7px;
+}
+.contenedor-plan .ul-planes p {
+    display: flex;
+    gap: 10px;
+    font-size: 0.7rem;
+    color: #fefefee8;
+}
+.contenedor-plan .ul-planes p.incluye {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+
+.btn-prueba-gratis-nav.planes {
+    margin-top: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 20px 40px;
+    background-color: var(--acento-color);
+    color: var(--bg-color-light);
+}
+
+.btn-prueba-gratis-nav.planes:hover {
+    background-color: var(--sombra1-acento-color);
+}
+
+@media only screen and (min-width:1300px) {
+    .contenedor-plan .ul-planes p {
+        display: flex;
+        gap: 10px;
+        font-size: 0.8rem;
+        color: #fefefee8;
+    }
+}
+
+@media only screen and (min-width:1800px) {
+    .contenedor-planes-y-precios {
+        gap: 30px;
+        width: 70%;
+        margin-top: 30px;
+    }
+    
+    .contenedor-planes-y-precios h1 {
+        font-size: 6rem;
+    }
+    .contenedor-planes-y-precios p {
+        font-size: 1.3rem;
+        margin: 0px;
+        width: 70%;
+    }
+
+    /* Seccion PLANES */
+    section.planes-in-planes {
+        background: linear-gradient(90deg, #161616 0%, #000000 81%);
+        text-align: center;
+        padding: 10px 0px;
+        margin-bottom: 60px;
+    }
+    section.planes-in-planes h1.h1-planes {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    section.planes-in-planes .subtitulo-planes {
+        font-size: 1.1rem;
+    }
+    section.planes-in-planes img.img-usuarios {
+        width: 180px;
+    }
+    section.planes-in-planes img {
+        width: 25px;
+    }
+    .contenedor-plan .costo {
+        font-size: 1rem;
+    }
+    .contenedor-plan .costo span {
+        font-size: 3rem;
+    }
+
+    .contenedor-plan .emnpezar-ahora {
+        padding: 16px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    section.planes-in-planes-in-planes-in-planes .contenedor-plan h2 {
+        color: var(--bg-color-light);
+        font-weight: 600;
+        margin: 7px;
+        font-size: 1.1rem;
+    }
+
+    .contenedor-plan .ul-planes p {
+        display: flex;
+        gap: 10px;
+        font-size: 0.8rem;
+        color: #fefefee8;
+    }
+    .contenedor-plan .ul-planes p.incluye {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+}

@@ -1,5 +1,5 @@
 .contenido footer {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 .footer {
     display: flex;
@@ -83,9 +83,9 @@
     width: 160px;
 }
 
-/* Contenedor footer (para cuando el footer ocupa el 100% de la pantalla  (como en mi cuenta)*/
+/* Contenedor footer (para cuando el footer ocupa el 100% de la pantalla  (como en mi cuenta, FAQ y planes)*/
 .contenedor-footer {
-    margin-bottom: 110px;
+    margin-bottom: 150px;
 }
 
 /* ---------------------- */

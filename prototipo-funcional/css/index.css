@@ -22,18 +22,6 @@
     --bg-color-dark: #080808;
     /*===== Fuente y tipografia =====*/
     --body-font: 'Poppins', sans-serif;
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: .938rem;
-    --smaller-font-size: .75rem;
-    /*===== Margenes =====*/
-    --mb-2: 1rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
-    /*===== z index =====*/
-    --z-back: -10;
-    --z-fixed: 100;
   }
 
 body {
@@ -388,7 +376,7 @@ footer.footer-inicio .footer-icons img {
     .contenedor-plan .ul-planes p {
         display: flex;
         gap: 10px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: #fefefee8;
     }
 }
@@ -541,7 +529,7 @@ section.planes .contenedor-plan h2 {
 .contenedor-plan .ul-planes p {
     display: flex;
     gap: 10px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fefefee8;
 }
 .contenedor-plan .ul-planes p.incluye {

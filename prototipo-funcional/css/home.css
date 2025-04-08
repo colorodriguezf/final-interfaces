@@ -22,19 +22,7 @@
     --bg-color-dark: #080808;
     /*===== Fuente y tipografia =====*/
     --body-font: 'Poppins', sans-serif;
-    --big-font-size: 2rem;
     --color-font: #b3b3b3;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: .938rem;
-    --smaller-font-size: .75rem;
-    /*===== Margenes =====*/
-    --mb-2: 1rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
-    /*===== z index =====*/
-    --z-back: -10;
-    --z-fixed: 100;
 
     /* Botones */
     --background-btn:#323232;
