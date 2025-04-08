@@ -448,8 +448,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
      // Mostrar contenido AUDIO (Rezo por vos, Charly)
-     let btn_audio = document.querySelector(".btn-audio"); 
-     btn_audio.addEventListener("click", function () {
+     let btn_audio = document.querySelectorAll(".btn-audio"); 
+     btn_audio.forEach(boton => {
+     boton.addEventListener("click", function () {
              contenedorPlaylist.style.display = 'none';
              contenidoCrear.style.display = 'none';
              contenidoPlaylist.style.display = 'none';
@@ -461,6 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
              // Muestro contenido
              contenidoAudio.style.display = 'block';
          });
+    });
 
 });
 
