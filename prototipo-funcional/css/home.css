@@ -321,6 +321,7 @@ ul.list-notificacion span.hace {
 .contenedor-crear-playlist {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .contenedor-tuspoiler-crear {
     position: fixed;
@@ -358,13 +359,15 @@ ul.list-notificacion span.hace {
     cursor: pointer;
     font-size: 11px;
 }
-.contenedor-tuspoiler-crear div {
+.contenedor-tuspoiler-crear div.mostrar-home {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 14px;
+    gap: 5px;
+    align-items: center;
+    font-size: 18px;
     font-weight: bold;
     color: var(--color-font);
+    cursor: pointer;
 }
 ::-webkit-scrollbar {
     display: none;

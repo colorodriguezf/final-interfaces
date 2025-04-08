@@ -317,6 +317,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }); 
     contenidoBusqueda.style.display = 'none'; //si estoy en los resultados y vuelvo al home via icono del nav, no desaparece. por eso lo saco aca
 
+    // BTN HOME
+    let btn_home = document.querySelector(".mostrar-home");
+    btn_home.addEventListener("click", function () {
+        contenidoCrear.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
+        contenidoPlaylist.style.display = 'none';
+        
+        contenedorPlaylist.style.display = 'block';
+        filtros.style.display = 'block';
+    });
+
+    
+    // Playlist Rock nacional
     playlistRockNacional.addEventListener("click", function () {
         contenedorPlaylist.style.display = 'none';
         contenidoCrear.style.display = 'none';
@@ -328,63 +344,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         contenidoPlaylist.style.display = 'block';
     });
-
-    let contador = 0;
-    let li_nueva_playlist = document.querySelector(".tus-playlist ul li.li-nueva-playlist");
-
-    btnCrear.addEventListener("click", function () {
-        contenedorPlaylist.style.display = 'none';
-        contenidoPlaylist.style.display = 'none';
-        filtros.style.display = 'none';
-        contenidoBusqueda.style.display = 'none';
-        contenidoCrear.style.display = 'block';
-        contenidoAutor.style.display = 'none';
-        contenidoPodcast.style.display = 'none';
-        contenidoAudio.style.display = 'none';
-
-        if(contador == 0) {
-            li_nueva_playlist.style.display = 'flex';
-        }
-        contador++;
-    });
-
-    // Botones eliminar playlist rock y nueva playlist n6
-    let btn_eliminar_rock = document.querySelector(".eliminar-rock-nacional");
-    let btn_eliminar_nueva = document.querySelector(".eliminar-nueva");
-
-
-    btn_eliminar_rock.addEventListener("click", function () {
-        playlistRockNacional.style.display = 'none';
-
-        // mostrar contenido como antes
-        contenedorPlaylist.style.display = 'block';
-        contenidoCrear.style.display = 'none';
-        filtros_busqueda.style.display = 'none';
-        contenidoAutor.style.display = 'none';
-        contenidoBusqueda.style.display = 'none';
-        contenidoPodcast.style.display = 'none';
-        contenidoAudio.style.display = 'none';
-
-        contenidoPlaylist.style.display = 'block';
-        filtros.style.display = 'block';
-    });
-    
-    btn_eliminar_nueva.addEventListener("click", function () {
-        li_nueva_playlist.style.display = 'none';
-
-         // mostrar contenido como antes
-        contenedorPlaylist.style.display = 'block';
-        contenidoCrear.style.display = 'none';
-        filtros_busqueda.style.display = 'none';
-        contenidoBusqueda.style.display = 'none';
-        contenidoAutor.style.display = 'none';
-        contenidoPodcast.style.display = 'none';
-        contenidoAudio.style.display = 'none';
-
-        contenidoPlaylist.style.display = 'block';
-        filtros.style.display = 'block';
-    });
-
 
     // resultados busqueda
     //al clickear en el input ya te escribe CHARLY popr defecto
@@ -462,6 +421,64 @@ document.addEventListener("DOMContentLoaded", function () {
              // Muestro contenido
              contenidoAudio.style.display = 'block';
          });
+    });
+
+
+    // Boton crear playlist
+    let contador = 0;
+    let li_nueva_playlist = document.querySelector(".tus-playlist ul li.li-nueva-playlist");
+
+    btnCrear.addEventListener("click", function () {
+        contenedorPlaylist.style.display = 'none';
+        contenidoPlaylist.style.display = 'none';
+        filtros.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
+        contenidoCrear.style.display = 'block';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
+
+        if(contador == 0) {
+            li_nueva_playlist.style.display = 'flex';
+        }
+        contador++;
+    });
+
+    // Botones eliminar playlist rock y nueva playlist n6
+    let btn_eliminar_rock = document.querySelector(".eliminar-rock-nacional");
+    let btn_eliminar_nueva = document.querySelector(".eliminar-nueva");
+
+
+    btn_eliminar_rock.addEventListener("click", function () {
+        playlistRockNacional.style.display = 'none';
+
+        // mostrar contenido como antes
+        contenedorPlaylist.style.display = 'block';
+        contenidoCrear.style.display = 'none';
+        filtros_busqueda.style.display = 'none';
+        contenidoAutor.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
+
+        contenidoPlaylist.style.display = 'block';
+        filtros.style.display = 'block';
+    });
+    
+    btn_eliminar_nueva.addEventListener("click", function () {
+        li_nueva_playlist.style.display = 'none';
+
+        // mostrar contenido como antes
+        contenedorPlaylist.style.display = 'block';
+        contenidoCrear.style.display = 'none';
+        filtros_busqueda.style.display = 'none';
+        contenidoBusqueda.style.display = 'none';
+        contenidoAutor.style.display = 'none';
+        contenidoPodcast.style.display = 'none';
+        contenidoAudio.style.display = 'none';
+
+        contenidoPlaylist.style.display = 'block';
+        filtros.style.display = 'block';
     });
 
 });
