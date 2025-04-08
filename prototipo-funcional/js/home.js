@@ -15,233 +15,222 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownMenu.classList.remove("show-menu-tus-playlist");
         }
     });
+
+    let li_filtro = document.querySelectorAll('.menu-tus-playlist li');
+
+    let tu_contenido_playlist = document.querySelectorAll(".li-playlist");
+    let tu_contendio_podcast = document.querySelectorAll(".li-podcast");
+
+    li_filtro.forEach(li => {
+        li.addEventListener('click', () => {
+            li_filtro.forEach(b => {
+                b.classList.remove('active'); //saco el active (color) a todos los li
+                let img = b.querySelector('img'); 
+                img.style.display = "none"; //saco img de todos los li
+            });
+
+            li.classList.add('active'); //agrego clase al clickeado
+            let img = li.querySelector('img');
+            img.style.display = "flex"; //muestro img clickeado
+
+            // Filtro de tus playlist segun li seleccionado
+            let valor_filtro = li.textContent;
+            if (valor_filtro === 'Playlist') {
+                tu_contenido_playlist.forEach(item => {
+                    item.style.display = "flex";
+                });
+                tu_contendio_podcast.forEach(item => {
+                    item.style.display = "none";
+                });
+            } else if (valor_filtro === 'Podcast') {
+                tu_contendio_podcast.forEach(item => {
+                    item.style.display = "flex";
+                });
+                tu_contenido_playlist.forEach(item => {
+                    item.style.display = "none";
+                });
+            } else if (valor_filtro === 'Artistas') {
+                tu_contendio_podcast.forEach(item => {
+                    item.style.display = "none";
+                });
+                tu_contenido_playlist.forEach(item => {
+                    item.style.display = "none";
+                });
+            } else {
+                tu_contenido_playlist.forEach(item => {
+                    item.style.display = "flex";
+                });
+                tu_contendio_podcast.forEach(item => {
+                    item.style.display = "flex";
+                });
+            }
+        });
+    });
+
 });
 
-let li_filtro = document.querySelectorAll('.menu-tus-playlist li');
+    // Recomendaciones
+    // Filtros (todos, musica, podcast)
+    let btns_filtro = document.querySelectorAll('.btn-filtro');
+    let musicaItems = document.querySelectorAll('.musica');
+    let podcastItems = document.querySelectorAll('.podcast');
 
-let tu_contenido_playlist = document.querySelectorAll(".li-playlist");
-let tu_contendio_podcast = document.querySelectorAll(".li-podcast");
+    btns_filtro.forEach(boton => {
+        boton.addEventListener('click', () => {
+            btns_filtro.forEach(b => b.classList.remove('activo'));
+            boton.classList.add('activo');
+            let filtroSeleccionado = boton.textContent.trim();
+            if (filtroSeleccionado === 'Música') {
+                musicaItems.forEach(item => item.style.display = 'block');
+                podcastItems.forEach(item => item.style.display = 'none');
+            } else if (filtroSeleccionado === 'Podcast') {
+                podcastItems.forEach(item => item.style.display = 'block');
+                musicaItems.forEach(item => item.style.display = 'none');
+            } else {
+                musicaItems.forEach(item => item.style.display = 'block');
+                podcastItems.forEach(item => item.style.display = 'block');
+            }
+        });    
+    });
 
-li_filtro.forEach(li => {
-    li.addEventListener('click', () => {
-        li_filtro.forEach(b => {
-            b.classList.remove('active'); //saco el active (color) a todos los li
-            let img = b.querySelector('img'); 
-            img.style.display = "none"; //saco img de todos los li
+    // Filtro contenido izqueirda (musica, podcast)
+    // let btns_filtro_tus = document.querySelectorAll('.btn-filtro-tus');
+    // btns_filtro_tus.forEach(boton => {
+    //     boton.addEventListener('click', () => {
+    //         btns_filtro_tus.forEach(b => b.classList.remove('activo'));
+    //         boton.classList.add('activo');
+    //     });    
+    // });
+
+    // Quitar publicidad 
+    let publicidad = document.querySelector(".publicidad-playlist");
+    if(publicidad) {
+        publicidad.addEventListener("click", quitarPublicidad);
+        function quitarPublicidad() {
+            publicidad.style.display = 'none';
+        }
+    }
+
+    // Playlist y recomendaciones
+    // Carousel
+    $(document).ready(function() {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 5,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next", // Solo el botón siguiente
+            },
+            loop: true,
+            breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            800: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            },
+            1300: {
+                slidesPerView: 5,
+                spaceBetween: 5,
+            },
+            1600: {
+                slidesPerView: 7,
+                spaceBetween: 8,
+            },
+            },
+        });
+    
+        var swiper = new Swiper(".mySwiper.trabajar", {
+            slidesPerView: 1,
+            spaceBetween: 5,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next", // Solo el botón siguiente
+            },
+            loop: true,
+            breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            800: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            },
+            1300: {
+                slidesPerView: 5,
+                spaceBetween: 5,
+            },
+            1600: {
+                slidesPerView: 6,
+                spaceBetween: 8,
+            },
+            },
+        });
+    
+        var swiper = new Swiper(".mySwiper.redondo", {
+            slidesPerView: 1,
+            spaceBetween: 5,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next", // Solo el botón siguiente
+            },
+            loop: true,
+            breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            800: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            },
+            1300: {
+                slidesPerView: 5,
+                spaceBetween: 5,
+            },
+            1600: {
+                slidesPerView: 6,
+                spaceBetween: 8,
+            },
+            },
+        });
+    
+        var swiperTickets = new Swiper(".mySwiper.tickets", {
+            slidesPerView: 4,
+            spaceBetween: 5,
+            loop: true,
+            allowTouchMove: true,
+            autoplay: false
         });
 
-        li.classList.add('active'); //agrego clase al clickeado
-        let img = li.querySelector('img');
-        img.style.display = "flex"; //muestro img clickeado
+        let ultimoScrollY = $(".recomendaciones").scrollTop();
+        console.log(ultimoScrollY)
+        $(".recomendaciones").on("scroll", function () {
+            let ScrollY = $(this).scrollTop();
+            
+            if (ScrollY > ultimoScrollY) {
+                swiperTickets.slideNext();
+            } else if (ScrollY < ultimoScrollY) {
+                swiperTickets.slidePrev();
+            }
 
-        // Filtro de tus playlist segun li seleccionado
-        let valor_filtro = li.textContent;
-        if (valor_filtro === 'Playlist') {
-            tu_contenido_playlist.forEach(item => {
-                item.style.display = "flex";
-            });
-            tu_contendio_podcast.forEach(item => {
-                item.style.display = "none";
-            });
-        } else if (valor_filtro === 'Podcast') {
-            tu_contendio_podcast.forEach(item => {
-                item.style.display = "flex";
-            });
-            tu_contenido_playlist.forEach(item => {
-                item.style.display = "none";
-            });
-        } else if (valor_filtro === 'Artistas') {
-            tu_contendio_podcast.forEach(item => {
-                item.style.display = "none";
-            });
-            tu_contenido_playlist.forEach(item => {
-                item.style.display = "none";
-            });
-        } else {
-            tu_contenido_playlist.forEach(item => {
-                item.style.display = "flex";
-            });
-            tu_contendio_podcast.forEach(item => {
-                item.style.display = "flex";
-            });
-        }
+            ultimoScrollY = ScrollY;
+        });
+
     });
-});
 
-
-
-// Recomendaciones
-// Filtros (todos, musica, podcast)
-let btns_filtro = document.querySelectorAll('.btn-filtro');
-let musicaItems = document.querySelectorAll('.musica');
-let podcastItems = document.querySelectorAll('.podcast');
-
-btns_filtro.forEach(boton => {
-    boton.addEventListener('click', () => {
-        btns_filtro.forEach(b => b.classList.remove('activo'));
-        boton.classList.add('activo');
-        let filtroSeleccionado = boton.textContent.trim();
-        if (filtroSeleccionado === 'Música') {
-            musicaItems.forEach(item => item.style.display = 'block');
-            podcastItems.forEach(item => item.style.display = 'none');
-        } else if (filtroSeleccionado === 'Podcast') {
-            podcastItems.forEach(item => item.style.display = 'block');
-            musicaItems.forEach(item => item.style.display = 'none');
-        } else {
-            musicaItems.forEach(item => item.style.display = 'block');
-            podcastItems.forEach(item => item.style.display = 'block');
-        }
-    });    
-});
-
-// Filtro contenido izqueirda (musica, podcast)
-// let btns_filtro_tus = document.querySelectorAll('.btn-filtro-tus');
-// btns_filtro_tus.forEach(boton => {
-//     boton.addEventListener('click', () => {
-//         btns_filtro_tus.forEach(b => b.classList.remove('activo'));
-//         boton.classList.add('activo');
-//     });    
-// });
-
-// Quitar publicidad 
-let publicidad = document.querySelector(".publicidad-playlist");
-if(publicidad) {
-    publicidad.addEventListener("click", quitarPublicidad);
-    function quitarPublicidad() {
-        publicidad.style.display = 'none';
-    }
-}
-
-// Playlist y recomendaciones
-// Carousel
-$(document).ready(function() {
-    $('.carousel-recomendaciones').slick({
-        slidesToShow: 7, // Mostramos 7 elementos en pantallas grandes
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: false,
-        // responsive: [
-        //     {
-        //         breakpoint: 1800,
-        //         settings: {
-        //             slidesToShow: 6
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 1600,
-        //         settings: {
-        //             slidesToShow: 6
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 1200,
-        //         settings: {
-        //             slidesToShow: 5
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 992,
-        //         settings: {
-        //             slidesToShow: 4
-        //         }
-        //     },
-        // ]
-    });
-});
-
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 5,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next", // Solo el botón siguiente
-    },
-    loop: true,
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      800: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1300: {
-        slidesPerView: 5,
-        spaceBetween: 5,
-      },
-      1600: {
-        slidesPerView: 7,
-        spaceBetween: 8,
-      },
-    },
-  });
-
-  var swiper = new Swiper(".mySwiper.trabajar", {
-    slidesPerView: 1,
-    spaceBetween: 5,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next", // Solo el botón siguiente
-    },
-    loop: true,
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      800: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1300: {
-        slidesPerView: 5,
-        spaceBetween: 5,
-      },
-      1600: {
-        slidesPerView: 6,
-        spaceBetween: 8,
-      },
-    },
-  });
-
-  var swiper = new Swiper(".mySwiper.redondo", {
-    slidesPerView: 1,
-    spaceBetween: 5,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next", // Solo el botón siguiente
-    },
-    loop: true,
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      800: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1300: {
-        slidesPerView: 5,
-        spaceBetween: 5,
-      },
-      1600: {
-        slidesPerView: 6,
-        spaceBetween: 8,
-      },
-    },
-  });
 
 
 //  Cambio de corazon al darle like a una card
