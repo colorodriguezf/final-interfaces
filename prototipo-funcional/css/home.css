@@ -302,8 +302,7 @@ ul.list-notificacion span.hace {
 }
 .contenido .tu-biblioteca {
     width: 40%;
-    height: 100vh;
-    margin-bottom: 100px; /* agrego para que no tape el reproductor*/
+    height: max-content;
     overflow: auto;
 }
 .contenedor-crear-playlist {
@@ -397,6 +396,10 @@ ul.list-notificacion span.hace {
 }
 .menu-container .list {
     width: 23px !important;
+}
+.tus-playlist {
+    height: 80vh;
+    overflow: scroll;
 }
 .tus-playlist ul {
     list-style: none;
@@ -992,6 +995,12 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
   .contenedor-img-ticket img {
     height: 100px;
   }
+  .mySwiper.tickets p {
+    margin: 0px;
+    color: rgb(216, 216, 216);
+    font-size: 12px;
+    font-weight: 500;
+  }
 /* ----------------------------------------------------------------- */
 /* Reproductor */
 section.reproductor {
@@ -1069,11 +1078,14 @@ section.reproductor .rep-medio {
 }
 section.reproductor .rep-medio .btn-reproductor {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     cursor: pointer;
 }
 .btn-reproductor img {
-    width: 30px;
+    width: 28px;
+}
+.btn-reproductor img.play {
+    width: 35px;
 }
 section.reproductor .rep-medio .tiempo {
     display: flex;
@@ -1239,7 +1251,6 @@ section.contendio-crear-playlist hr {
     font-weight: bold;
     cursor: pointer;
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    filter: brightness(95%);
 }
 
 .btn-accion {
@@ -1490,6 +1501,9 @@ h1.cantidad-comentarios {
 .menu-desplegable-crear ul li:hover {
     background-color: #4d4d4d;
     border-radius: 5px;
+}
+.opciones-crear {
+    cursor: pointer;
 }
 .menu-desplegable-crear.show {
     display: block;
