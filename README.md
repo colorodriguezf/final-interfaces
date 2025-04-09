@@ -30,23 +30,29 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
 
    - **Buscar y Crear**  
      
-     ![Buscar tus playlists](img-ruta/punto3-buscar-crear.png)  
+     ![Buscar tus playlists](img-ruta/punto3-1.png)  
 
-   - **Escuchar y Opciones**  
+   - **Escuchar, Opciones, Eliminar y Modificar**
      
-     ![Escuchar tu playlist](img-ruta/punto3-play.png)  
-
-   - **Eliminar y Modificar**  
+     **En la primera imagen**, se muestra un botón para dar play a la playlist junto con el boton de opciones.  
+     **En la segunda imagen**, se muestra el modal abierto con las opciones eliminar y editar playlist.  
      
-     ![Modificar o eliminar playlists](img-ruta/punto3-modificar-eliminar.png)  
+     ![Escuchar tu playlist](img-ruta/punto3-2.png)  
 
-## 4. **Suscribirse a un plan mensual (existen 4 planes)**  
+
+## 4. **Suscribirse a un plan mensual (existen 4 planes)**
+
+   ![Planes](img-ruta/punto4.png)  
 
 ## 5. **Iniciar sesión y configurar “mi cuenta”, preferencias, etc**  
 
    - **Botón en el nav para iniciar sesión**  
      
-     ![Iniciar sesión](img-ruta/punto5-iniciar.png)  
+     ![Iniciar sesión](img-ruta/punto5-iniciar.png)
+
+   - **Formulario inicio sesión**  
+     
+     ![Iniciar sesión](img-ruta/punto5-login.png)  
 
    - **Acceso a "Mi Cuenta"**  
      
@@ -64,7 +70,7 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
 
    - **Reproductor con posición fija disponible en todo momento**  
      
-     ![Reproductor](img-ruta/punto6-reproductor.png)  
+     ![Reproductor](img-ruta/punto6.png)  
 
 ## 7. **Ver el resumen de una banda, autor, episodio de podcast, etc**  
 
@@ -130,21 +136,30 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
      
      ![Favoritos](img-ruta/punto14-ejemplo1.png)  
 
-   - **Ejemplo 2: Guardar audios desde una card grande**  
+   - **Ejemplo 2: Guardar audios desde su resumen**  
      
-     ![Favoritos](img-ruta/punto14-ejemplo2.png)  
+     ![Favoritos](img-ruta/punto14-ejemplo-2.png)
+
+     - **Ejemplo 3: Guardar podcast desde su resumen**  
+     
+     ![Favoritos](img-ruta/punto14-ejemplo-3.png)
+
+     - **Ejemplo 4: Guardar playlist desde su resumen**  
+     
+     ![Favoritos](img-ruta/punto14-ejemplo-4.png)
 
 ## 15. **Compartir mi playlist y ver cuantas reproducciones tuvo esa playlist**  
 
    - **En la primera imagen**, se muestra un botón para compartir la playlist junto con la cantidad de reproducciones.  
    - **En la segunda imagen**, se muestra el modal abierto con las opciones de redes para compartir la playlist y el enlace para copiar.  
 
-   ![Compartir Playlist](img-ruta/punto15-compartir.png)  
+   ![Compartir Playlist](img-ruta/punto15.png)  
    
     
 ## 16. **Se debe incentivar al usuario a calificar y opinar acerca de la playlist o tema o podcast que está escuchando**  
 
-   - **Al final del reproductor podemos ver dentro del recuadro, una forma sencilla de incentivar al usuario que opine y califique lo que esta escuchando**
+   - **En la parte superior del reproductor podemos ver dentro del recuadro, una forma sencilla de incentivar al usuario que opine y califique lo que esta escuchando**
+   - **Al ser un marquee, este se encuentra en movimiento y logra captar la atencion del usuario**
 
    ![Reproductort](img-ruta/punto16.png)
 
@@ -156,22 +171,79 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
 
 ## Presentar los diseños y maquetas para las siguientes páginas/características:
 1. **Homepage**: Categorías, recomendaciones, etc. (incluyendo el modo reproducción).
-2. **Búsquedas generales**.
-3. **Filtrado**.
-4. **Página de suscripción o planes**.
-5. **Página de “Mi cuenta”**.
+     
+     ![Homepage](img-ruta/diseño1.png)  
+
+3. **Búsquedas generales**.
+     
+     ![Busquedas generales](img-ruta/diseño2.png)  
+
+4. **Filtrado**.
+
+    - **Filtrado homepage**  
+     
+     ![Filtro homepage](img-ruta/diseño3-1.png)
+
+    - **Filtrado busqueda**  
+     
+     ![Filtro busqueda](img-ruta/diseño3-2.png)
+
+    - **Filtrado de MIS playlist**  
+     
+     ![Filtro mis playlist](img-ruta/diseño3-3.png)
+
+5. **Página de suscripción o planes**.
+     
+     ![Pagina planes](img-ruta/diseño4.png)
+
+
+6. **Página de “Mi cuenta”**.
+
+    ![Mi cuenta](img-ruta/diseño5.png)
+
 
 ### Opcionales
 6. **Calificación de un tema o playlist**.
 
+  - **Calificar un auidio"**  
+     
+     ![Calificar audio](img-ruta/punto8-1.png)  
 
-7. **Ficha de un tema, podcast o playlist**.
+   - **Calificar una playlist**  
+     
+     ![Calificar playlist](img-ruta/punto8-2.png)  
 
+7. **Ficha de un tema, podcast o playlist**.    
 
+   - **Resumen cancion**  
+     
+     ![Configurar cuenta](img-ruta/punto7-cancion.png)
+     
+   - **Resumen episodio de podcast**  
+     
+     ![Resumen podcast](img-ruta/punto7-podcast.png)  
+
+   - **Resumen playlist**  
+     
+     ![Resumen playlist](img-ruta/opcional7.png)  
 
 8. **Marcar un tema o playlist como favorita**.
 
-   
+   - **Ejemplo 1: Guardar audios desde un carrusel**  
+     
+     ![Favoritos](img-ruta/punto14-ejemplo1.png)  
+
+   - **Ejemplo 2: Guardar audios desde su resumen**  
+     
+     ![Favoritos](img-ruta/punto14-ejemplo-2.png)
+
+     - **Ejemplo 3: Guardar podcast desde su resumen**  
+     
+     ![Favoritos](img-ruta/punto14-ejemplo-3.png)
+
+     - **Ejemplo 4: Guardar playlist desde su resumen**  
+     
+     ![Favoritos](img-ruta/punto14-ejemplo-4.png)
 
 ## Entrega
 La entrega se deberá realizar utilizando el branch `gh-pages` de GitHub, con una página `index.html` que contenga links a:
