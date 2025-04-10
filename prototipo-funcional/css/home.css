@@ -980,6 +980,7 @@ section.playlist-home .carousel-recomendaciones .contenedor-card img {
 }
 .podcast-grande .pg-footer .reproducciones {
     font-size: 12px;
+    margin: 0px;
 }
 
   /* Swipper TICKETS */
