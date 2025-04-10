@@ -14,6 +14,11 @@ Este se podra ver seleccionando la cuarta opcion: **Prototipo funcional (HTML, C
 ## ℹ️ Aclaración  
 Las siguientes características están optimizadas para dispositivos con una resolución de **1200px o superior**.
 
+## ℹ️ Aclaración  
+Se utiliza **bootstrap** en algunos iconos, modal compartir playlist y para accordion de FAQ (https://getbootstrap.com/).
+
+Ademas se usa **Swipper JS** para los carouseles del home (https://swiperjs.com/).
+
 ## Características
 Se deberá diseñar la interfaz de un sitio web que soporte las siguientes características:
 
@@ -248,7 +253,27 @@ Se deberá diseñar la interfaz de un sitio web que soporte las siguientes carac
 ## Entrega
 La entrega se deberá realizar utilizando el branch `gh-pages` de GitHub, con una página `index.html` que contenga links a:
 - **Prototipos en papel** (opcionales).
+
+   [Prototipo en papel](https://www.figma.com/design/1WNmIqtyuIkbZZ2PxnJshC/Final-Interfaces-2025---Spoiler-Five-Inc.?node-id=1-2&t=562PUv5PCUcnujXy-1)
+
 - **Prototipos en alta fidelidad** (modo EDITOR y modo PRESENTACIÓN en Figma).
+   
+  - **Modo editor**  
+     
+      [Prototipo en papel](https://www.figma.com/design/1WNmIqtyuIkbZZ2PxnJshC/Final-Interfaces-2025---Spoiler-Five-Inc.?node-id=1-2&t=562PUv5PCUcnujXy-1)
+
+   - **Modo presentacion**  
+     
+      [Prototipo en papel](https://www.figma.com/design/1WNmIqtyuIkbZZ2PxnJshC/Final-Interfaces-2025---Spoiler-Five-Inc.?node-id=1-2&t=562PUv5PCUcnujXy-1)
+
 - **Prototipo funcional** implementado con HTML, CSS y JS. (Indicar si se usa un framework).
+
+     [Prototipo en papel](https://colorodriguezf.github.io/final-interfaces/prototipo-funcional/index.html)
+
+     Se utiliza **bootstrap** en algunos iconos, modal compartir playlist y para accordion de FAQ (https://getbootstrap.com/).
+
+     Ademas se usa **Swipper JS** para los carouseles del home (https://swiperjs.com/).
+
+  
 
 **Tiempo de entrega: 25 días.**
